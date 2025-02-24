@@ -623,3 +623,26 @@ a {
 .letter-spacing {
   letter-spacing: .2rem;
   color: rgba(255, 255, 255, 0.5) !important; }
+
+
+
+  .project-box-link {
+    display: block;
+    text-decoration: none;
+}
+
+.project-box-link .resume-item {
+    padding: 30px;
+    background: #333;
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+    border: 4px solid transparent;
+    border-radius: 10px; /* Rounding the edges */
+}
+
+.project-box-link .resume-item:hover, .project-box-link .resume-item:active, .project-box-link .resume-item:focus {
+    -webkit-box-shadow: 0 5px 50px -10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 50px -10px rgba(0, 0, 0, 0.1);
+    top: -2px; /* Pop-up effect */
+}
