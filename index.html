@@ -257,140 +257,166 @@
 	</section>
 			
 	  
+<style>
+  /* Container for each portfolio project */
+  .portfolio-item {
+    display: flex;
+    background: #1e1e1e; /* base background fallback */
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+    margin-bottom: 30px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  .portfolio-item:hover {
+    transform: translate(8px, 8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+  }
 
+  /* Left part with image and text stacked */
+  .portfolio-left {
+    flex: 0 0 300px;
+    display: flex;
+    flex-direction: column;
+    background: #1e1e1e; /* darker shade */
+    color: #fff;
+  }
 
+  .portfolio-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    filter: brightness(0.85);
+  }
 
+  .portfolio-info {
+    padding: 15px 20px;
+  }
 
+  .portfolio-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
 
-	<section class="site-section" id="section-portfolio">
-		<div class="container">
-			<div class="row">
-				<div class="section-heading text-center col-md-12">
-					<h2>Featured <strong>Portfolio</strong></h2>
-				</div>
-			</div>
-			<div class="filters">
-				<ul>
-					<li class="active" data-filter="*">All</li>
-					<li data-filter=".packaging">Packaging</li>
-					<li data-filter=".mockup">Mockup</li>
-					<li data-filter=".typography">Typography</li>
-					<li data-filter=".photography">Photography</li>
-				</ul>
-			</div>
+  .portfolio-icons {
+    display: flex;
+    gap: 10px;
+  }
 
-			<div class="filters-content">
-				<div class="row grid">
-					<div class="single-portfolio col-sm-4 all mockup">
-						<div class="relative">
-							<div class="thumb">
-								<div class="overlay overlay-bg"></div>
-								<img class="image img-fluid" src="images/p1.jpg" alt="">
-							</div>
-							<a href="images/p1.jpg" class="img-pop-up">  
-								<div class="middle">
-									<div class="text align-self-center d-flex"><img src="images/preview.png" alt=""></div>
-								</div>
-							</a>                                  
-						</div>
-						<div class="p-inner">
-							<h4>Square Box Mockup</h4>
-							<div class="cat">Mockup</div>
-						</div>                                         
-					</div>
-					<div class="single-portfolio col-sm-4 all mockup">
-						<div class="relative">
-							<div class="thumb">
-								<div class="overlay overlay-bg"></div>
-								<img class="image img-fluid" src="images/p2.jpg" alt="">
-							</div>
-							<a href="images/p2.jpg" class="img-pop-up">  
-								<div class="middle">
-									<div class="text align-self-center d-flex"><img src="images/preview.png" alt=""></div>
-								</div>
-							</a>                                  
-						</div>
-						<div class="p-inner">
-							<h4>Product Box Package Mockup</h4>
-							<div class="cat">Mockup</div>
-						</div>                                         
-					</div>                            
-					<div class="single-portfolio col-sm-4 all packaging">
-						<div class="relative">
-							<div class="thumb">
-								<div class="overlay overlay-bg"></div>
-								<img class="image img-fluid" src="images/p3.jpg" alt="">
-							</div>
-							<a href="images/p3.jpg" class="img-pop-up">  
-								<div class="middle">
-									<div class="text align-self-center d-flex"><img src="images/preview.png" alt=""></div>
-								</div>
-							</a> 
+  .portfolio-icon {
+    width: 30px;
+    height: 30px;
+    filter: grayscale(60%);
+    transition: filter 0.3s ease;
+  }
+  .portfolio-icon:hover {
+    filter: grayscale(0%);
+  }
 
-						</div>
-						<div class="p-inner">
-							<h4>Creative Package Design</h4>
-							<div class="cat">Packaging</div>
-						</div>
-					</div>
-					<div class="single-portfolio col-sm-4 all packaging">
-						<div class="relative">
-							<div class="thumb">
-								<div class="overlay overlay-bg"></div>
-								<img class="image img-fluid" src="images/p4.jpg" alt="">
-							</div>
-							<a href="images/p4.jpg" class="img-pop-up">  
-								<div class="middle">
-									<div class="text align-self-center d-flex"><img src="images/preview.png" alt=""></div>
-								</div>
-							</a>                                
-						</div> 
-						<div class="p-inner">
-							<h4>Packaging Brand</h4>
-							<div class="cat">Packaging</div>
-						</div>
-					</div>
-					<div class="single-portfolio col-sm-4 all typography">
-						<div class="relative">
-							<div class="thumb">
-								<div class="overlay overlay-bg"></div>
-								<img class="image img-fluid" src="images/p5.jpg" alt="">
-							</div>
-							<a href="images/p5.jpg" class="img-pop-up">  
-								<div class="middle">
-									<div class="text align-self-center d-flex"><img src="images/preview.png" alt=""></div>
-								</div>
-							</a>                                
-						</div>
-						<div class="p-inner">
-							<h4>Isometric 3D Extrusion</h4>
-							<div class="cat">Typography</div>
-						</div>
-					</div>
-					<div class="single-portfolio col-sm-4 all photography">
-						<div class="relative">
-							<div class="thumb">
-								<div class="overlay overlay-bg"></div>
-								<img class="image img-fluid" src="images/p6.jpg" alt="">
-							</div>
-							<a href="images/p6.jpg" class="img-pop-up">  
-								<div class="middle">
-									<div class="text align-self-center d-flex"><img src="images/preview.png" alt=""></div>
-								</div>
-							</a>                                
-						</div>
-						<div class="p-inner">
-							<h4>White Space Photography</h4>
-							<div class="cat">photography</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- .section -->
+  /* Right part with description */
+  .portfolio-right {
+    flex: 1;
+    padding: 25px 30px;
+    display: flex;
+    align-items: center;
+    background: #303030; /* slightly lighter dark shade */
+    color: #ddd;
+  }
 
-	
+  .features-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #ccc;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .portfolio-item {
+      flex-direction: column;
+    }
+    .portfolio-left {
+      flex: none;
+      width: 100%;
+      background: #1e1e1e;
+    }
+    .portfolio-right {
+      padding: 15px 20px;
+      background: #303030;
+    }
+  }
+</style>
+
+<section class="site-section" id="section-portfolio">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 mb-5">
+        <div class="section-heading text-center">
+          <h2>Portfolio <strong>Projects</strong></h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 1: Google Sheets & Excel Business Project -->
+    <div class="row portfolio-entry mb-5" style="cursor:pointer; transition: transform 0.3s ease; box-shadow: 0 0 10px rgba(0,0,0,0.5); border-radius: 8px;" 
+         onmouseover="this.style.transform='translate(5px,5px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.8)';" 
+         onmouseout="this.style.transform='translate(0,0)'; this.style.boxShadow='0 0 10px rgba(0,0,0,0.5)';">
+
+      <!-- Left side: image, title, icons -->
+      <div class="col-md-5 d-flex flex-column" style="background-color: #1b1f29; border-radius: 8px 0 0 8px; padding: 20px; color: white;">
+        <img src="images/business-automation-thumbnail.png" alt="Google Sheets & Excel Project" class="img-fluid mb-3" style="border-radius: 6px;">
+        <h4>Business Automation with Google Sheets & MS Excel</h4>
+        <div class="mt-auto">
+          <!-- Icons -->
+          <img src="images/google_sheets_icon.png" alt="Google Sheets" title="Google Sheets" style="height:30px; margin-right: 10px;">
+          <img src="images/ms_excel_icon.png" alt="MS Excel" title="Microsoft Excel" style="height:30px;">
+        </div>
+      </div>
+
+      <!-- Right side: skills bullet list in two columns -->
+      <div class="col-md-7" style="background-color: #2a2e3e; border-radius: 0 8px 8px 0; padding: 30px; color: #ddd;">
+        <div class="row">
+          <div class="col-md-6">
+            <h5>Spreadsheet Skills</h5>
+            <ul style="columns: 1; padding-left: 20px;">
+			  <li>Power Query</li>
+              <li>Macros</li>
+              <li>Google Apps Script</li>
+              <li>Data Cleaning & Preparation</li>
+              <li>Formulas & Functions (VLOOKUP, XLOOKUP, INDEX-MATCH, SUMIFS, COUNTIFS, IF, AND, OR)</li>
+              <li>Data Validation</li>
+              <li>Pivot Tables</li>
+              <li>Data Sorting & Filtering</li>
+              <li>Conditional Formatting</li>
+              <li>Chart & Graph Creation</li>
+              <li>Data Visualization</li>
+              <li>Error Handling (IFERROR)</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h5>Analytical & Soft Skills</h5>
+            <ul style="columns: 1; padding-left: 20px;">
+              <li>Problem-Solving</li>
+              <li>Critical Thinking</li>
+              <li>Data Interpretation</li>
+              <li>Attention to Detail</li>
+              <li>Communication Skills</li>
+              <li>Business Acumen</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add more projects below similarly -->
+
+  </div>
+</section>
+
 	
 
 	<section class="site-section" id="section-about">
@@ -417,6 +443,8 @@
 		</div>
 	</section>
 
+
+<!--	
 	<section class="site-section">
 		<div class="container">
 			<div class="row mb-5">
@@ -484,8 +512,11 @@
 			</div>
 		</div>
 	</section>
+-->
 
 
+
+<!--
 	<section class="site-section pb-0"  id="section-services">
 		<div class="container">
 
@@ -534,10 +565,10 @@
 			</div>
 		</div>
 	</section>
-
+-->
 
 	
-
+<!--
 	<section class="site-section" id="section-blog">
 		<div class="container">
 			<div class="row">
@@ -597,6 +628,9 @@
 			</div>
 		</div>
 	</section>
+-->
+
+
 
 	<section class="site-section" id="section-contact">
 		<div class="container">
@@ -639,10 +673,6 @@
 							+49 15750967704
 						</li>
 						<li>
-							<span class="text-uppercase">Fax</span>
-							+000000000
-						</li>
-						<li>
 							<span class="text-uppercase">Address</span>
 							Hahnenstr. 23, Hürth, Germany <br>
 						</li>
@@ -667,11 +697,9 @@
 			<div class="row mb-5">
 				<div class="col-md-12 text-center">
 					<p>
-						<a href="#" class="social-item"><span class="icon-facebook2"></span></a>
-						<a href="#" class="social-item"><span class="icon-twitter"></span></a>
-						<a href="#" class="social-item"><span class="icon-instagram2"></span></a>
-						<a href="#" class="social-item"><span class="icon-linkedin2"></span></a>
-						<a href="#" class="social-item"><span class="icon-vimeo"></span></a>
+						<a href="https://www.facebook.com/samiulhossain.sajal/" class="social-item"><span class="icon-facebook2"></span></a>
+						<a href="https://www.instagram.com/samiul_hossain/" class="social-item"><span class="icon-instagram2"></span></a>
+						<a href="https://www.linkedin.com/in/samiul-sajal/" class="social-item"><span class="icon-linkedin2"></span></a>
 					</p>
 				</div>
 			</div>
