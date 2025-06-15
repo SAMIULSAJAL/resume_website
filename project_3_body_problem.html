@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Three-Body Simulation Project</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body style="font-family: sans-serif; background-color: #1e1e2f; color: #f0f0f0; padding: 40px;">
+
+  <h1 style="text-align: center;">Three-Body Problem Simulation:<br>Saturn, Janus & Epimetheus</h1>
+  <img src="images/portfolio/moons_orbits.gif" alt="Three Body Simulation" style="display: block; margin: 30px auto; max-width: 20%; border-radius: 10px;">
+
+  <section style="margin-top: 40px;">
+    <h2>Project Goal</h2>
+    <p>
+      The aim of this project was to numerically simulate the orbital motion of Saturn's co-orbital moons — Janus and Epimetheus — using the Runge-Kutta 4th Order (RK4) method in Julia. This simulation highlights the fascinating orbital swap mechanism these two moons exhibit, despite sharing nearly the same orbit.
+    </p>
+  </section>
+
+  <section style="margin-top: 40px;">
+    <h2>Theoretical Background</h2>
+    <p>
+      Janus and Epimetheus are two small moons of Saturn that share a similar orbit and exchange positions approximately every four years due to gravitational interaction. This makes them a natural example of a restricted three-body problem. To simulate their motion, Newton's laws of motion and universal gravitation were applied.
+    </p>
+  </section>
+
+  <section style="margin-top: 40px;">
+    <h2>Methodology</h2>
+    <ul>
+      <li>Used Julia language for numerical computing and plotting.</li>
+      <li>Defined gravitational interaction between Saturn, Janus, and Epimetheus.</li>
+      <li>Applied the RK4 method to solve second-order ODEs for each moon’s motion.</li>
+      <li>Simulated motion over a span of several years to capture orbital swaps.</li>
+      <li>Plotted orbits and animated their paths to visualize dynamics.</li>
+    </ul>
+  </section>
+
+  <section style="margin-top: 40px;">
+    <h2>Results & Insights</h2>
+    <p>
+      The simulation successfully captured the orbital swap behavior of Janus and Epimetheus. Their mutual gravitational interaction results in one moon moving slightly inward and speeding up, while the other moves outward and slows down — effectively causing them to exchange orbits without collision.
+    </p>
+  </section>
+
+  <section style="margin-top: 40px;">
+    <h2>Skills & Tools</h2>
+    <ul>
+      <li>Programming: Julia</li>
+      <li>Numerical Methods: Runge-Kutta 4th Order</li>
+      <li>Physics: Classical Mechanics, Orbital Dynamics</li>
+      <li>Data Visualization: Plots.jl</li>
+    </ul>
+  </section>
+
+  <section style="margin-top: 40px;">
+    <h2>Project Files</h2>
+    <p>
+      <a href="https://github.com/samiulhossain/julia-three-body-problem" target="_blank" style="color: #90caf9;">🔗 View on GitHub</a>
+    </p>
+  </section>
+
+  <footer style="margin-top: 60px; text-align: center; color: #888;">
+    <p>&copy; 2025 Samiul Hossain Sajal</p>
+  </footer>
+
+</body>
+
+</html>

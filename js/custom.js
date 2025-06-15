@@ -334,3 +334,35 @@
 
 })();
 
+
+
+
+// portfolio projects - additional projects
+
+
+const toggleBtn = document.getElementById('toggle-projects-btn');
+const projectsGrid = document.getElementById('additional-projects');
+
+toggleBtn.addEventListener('click', () => {
+  if (projectsGrid.classList.contains('collapsed')) {
+    // Expand the projects
+    projectsGrid.classList.remove('collapsed');
+    projectsGrid.classList.add('expanded');
+
+    // Show all hidden projects (remove 'hidden' class)
+    const hiddenProjects = projectsGrid.querySelectorAll('.hidden');
+    hiddenProjects.forEach(proj => proj.style.display = 'block');
+
+    toggleBtn.textContent = 'See Less';
+  } else {
+    // Collapse the projects
+    projectsGrid.classList.remove('expanded');
+    projectsGrid.classList.add('collapsed');
+
+    // Hide the extra projects again (add back 'hidden' style)
+    const hiddenProjects = projectsGrid.querySelectorAll('.hidden');
+    hiddenProjects.forEach(proj => proj.style.display = 'none');
+
+    toggleBtn.textContent = 'See More';
+  }
+});

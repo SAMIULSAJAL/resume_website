@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Family Business Automation Project — Details</title>
+<style>
+  body {
+    background-color: #12161e;
+    color: #eee;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    line-height: 1.5;
+  }
+  h1, h2 {
+    color: #4a90e2; /* calm blue */
+    margin-bottom: 0.5rem;
+  }
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #ddd;
+  }
+  ul {
+    list-style: inside disc;
+    margin-bottom: 1.5rem;
+    color: #ccc;
+  }
+  ul li {
+    margin-bottom: 0.5rem;
+  }
+  a.button {
+    display: inline-block;
+    background-color: #4a90e2;
+    color: #12161e;
+    padding: 12px 20px;
+    margin-top: 25px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  a.button:hover {
+    background-color: #357ABD;
+  }
+  hr {
+    border: none;
+    border-top: 1px solid #333;
+    margin: 3rem 0;
+  }
+
+  /* Flowchart container */
+  .flowchart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0;
+  }
+  /* Flow step box */
+  .flow-step {
+    background-color: #222a44;
+    padding: 20px 30px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    color: #aad4ff;
+    font-weight: 600;
+    position: relative;
+  }
+  /* Arrow below each box except last */
+  .flow-step:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: solid #4a90e2;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 8px;
+    rotate: 45deg;
+    /* creates a downward arrow */
+  }
+
+  /* Horizontal flow (optional, for another diagram style) */
+  .flowchart-horizontal {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  .flow-step-horizontal {
+    background-color: #222a44;
+    padding: 15px 20px;
+    border-radius: 8px;
+    width: 180px;
+    text-align: center;
+    color: #aad4ff;
+    font-weight: 600;
+    position: relative;
+  }
+  .flow-step-horizontal:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    transform: translateY(-50%);
+    border: solid #4a90e2;
+    border-width: 3px 3px 0 0;
+    display: inline-block;
+    padding: 7px;
+    rotate: 45deg;
+  }
+
+  .flowchart-horizontal {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+}
+.flow-step-horizontal {
+  background-color: #222a44;
+  padding: 15px 20px;
+  border-radius: 8px;
+  width: 180px;
+  text-align: center;
+  color: #aad4ff;
+  font-weight: 600;
+  position: relative;
+}
+.flow-step-horizontal:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -25px;
+  transform: translateY(-50%);
+  border: solid #4a90e2;
+  border-width: 3px 3px 0 0;
+  display: inline-block;
+  padding: 7px;
+  rotate: 45deg;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<h1>Family Business Automation for Chicken Feed Company</h1>
+
+<h2>Why This Project?</h2>
+<p>
+Managing a chicken feed business involves many daily tasks — handling supplier orders, dealer payments, stock management, and employee salaries. Previously, these were done manually, causing errors and delays.
+</p>
+
+<h2>What We Built</h2>
+<p>
+An automated spreadsheet system that simplifies and tracks all these operations in one place — easy for our team to use.
+</p>
+
+<h2>How It Works — Process Flow</h2>
+
+<div class="flowchart-horizontal">
+  <div class="flow-step-horizontal">1. Receive Supplier Raw Materials & Record Purchase</div>
+  <div class="flow-step-horizontal">2. Mix and Produce Chicken Feed Stock</div>
+  <div class="flow-step-horizontal">3. Sell Feed to Dealers and Track Partial Payments</div>
+  <div class="flow-step-horizontal">4. Monitor Stock & Expenses (Salaries, Overheads)</div>
+  <div class="flow-step-horizontal">5. Generate Reports for Business Insights</div>
+</div>
+
+
+<h2>Key Benefits</h2>
+<ul>
+  <li>Accurate tracking of payments and outstanding balances</li>
+  <li>Real-time stock updates to avoid shortages</li>
+  <li>Clear financial dashboards for quick decisions</li>
+  <li>User-friendly for all staff levels</li>
+</ul>
+
+<h2>Business Impact</h2>
+<p>
+This system saved us hours every day, reduced costly mistakes, and gave us confidence to grow the business with better control.
+</p>
+
+<hr />
+
+<h2>Explore the Project</h2>
+<a href="https://docs.google.com/spreadsheets/d/1Oe4CZt8P85GV68vdaZemYrRef8wVyhUdXqoocnmeuEU/edit?gid=581771623#gid=581771623" target="_blank" class="button">View Google Sheet</a>
+
+</body>
+</html>
+
