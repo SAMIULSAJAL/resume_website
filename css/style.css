@@ -828,3 +828,9 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* hide project section*/
+#old-projects-section {
+  display: none;
+}
