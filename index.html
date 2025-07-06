@@ -621,60 +621,112 @@
 		</div>
 	</section>
 -->
-
+<!--  https://script.google.com/macros/s/AKfycbx9OqpWOhDXcxl2iPIC-k6sGWUhpCA5DtQquuqcmryYWO3x4Nl1TtQ-iS4nP2R_c9HTag/exec  -->
 
 <!-- ---------------------- get in touch--------------------- -->	
 
-	<section class="site-section" id="section-contact">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 mb-5">
-					<div class="section-heading text-center">
-						<h2>Get <strong>In Touch</strong></h2>
-					</div>
-				</div>
+    <section class="site-section" id="section-contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 mb-5">
+                    <div class="section-heading text-center">
+                        <h2>Get <strong>In Touch</strong></h2>
+                    </div>
+                </div>
 
-				<div class="col-md-7 mb-5 mb-md-0">
-					<form action="https://script.google.com/macros/s/AKfycbx9OqpWOhDXcxl2iPIC-k6sGWUhpCA5DtQquuqcmryYWO3x4Nl1TtQ-iS4nP2R_c9HTag/exec" method="POST" class="site-form">
-						<h3 class="mb-5">Get In Touch</h3>
-						<div class="form-group">
-							<input type="text" class="form-control px-3 py-4" placeholder="Your Name">
-						</div>
-						<div class="form-group">
-							<input type="email" class="form-control px-3 py-4" placeholder="Your Email">
-						</div>
-						<div class="form-group">
-							<input type="email" class="form-control px-3 py-4" placeholder="Your Phone">
-						</div>
-						<div class="form-group mb-5">
-							<textarea class="form-control px-3 py-4"cols="30" rows="10" placeholder="Write a Message"></textarea>
-						</div>
-						<div class="form-group">
-							<input type="submit" class="btn btn-primary  px-4 py-3" value="Send Message">
-						</div>
-					</form>
-				</div>
-				<div class="col-md-5 pl-md-5">
-					<h3 class="mb-5">My Contact Details</h3>
-					<ul class="site-contact-details">
-						<li>
-							<span class="text-uppercase">Email</span>
-							samiulhossainsajal@gmail.com
-						</li>
-						<li>
-							<span class="text-uppercase">Phone</span>
-							+49 15750967704
-						</li>
-						<li>
-							<span class="text-uppercase">Address</span>
-							Hahnenstr. 23, Hürth, Germany <br>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</section>
+                <div class="col-md-7 mb-5 mb-md-0">
+                    <!-- IMPORTANT: Replace 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL' with your actual deployed URL -->
+                    <form action="https://script.google.com/macros/s/AKfycbz4Az-f9RVd8VuP7xLdldFeuCFqqbkqVdesfYCiR2RcdzY4oeTLS1K-7B7BZPFcj04L/exec" method="POST" class="site-form" id="contactForm">
+                        <h3 class="mb-5">Get In Touch</h3>
+                        <div class="form-group">
+                            <input type="text" class="form-control px-3 py-4" placeholder="Your Name" name="fullName" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control px-3 py-4" placeholder="Your Email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-control px-3 py-4" placeholder="Your Phone (Optional)" name="phone">
+                        </div>
+                        <div class="form-group mb-5">
+                            <textarea class="form-control px-3 py-4" cols="30" rows="10" placeholder="Write a Message" name="message" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-primary px-4 py-3" value="Send Message">
+                        </div>
+                        <div id="formResponseMessage" class="mt-4 text-center font-semibold p-2 rounded-lg" style="display: none;"></div>
+                    </form>
+                </div>
+                <div class="col-md-5 pl-md-5">
+                    <h3 class="mb-5">My Contact Details</h3>
+                    <ul class="site-contact-details">
+                        <li>
+                            <span class="text-uppercase">Email</span>
+                            samiulhossainsajal@gmail.com
+                        </li>
+                        <li>
+                            <span class="text-uppercase">Phone</span>
+                            +49 15750967704
+                        </li>
+                        <li>
+                            <span class="text-uppercase">Address</span>
+                            Hahnenstr. 23, Hürth, Germany <br>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', async function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const form = event.target;
+            const formData = new FormData(form);
+            const responseMessageDiv = document.getElementById('formResponseMessage');
+            responseMessageDiv.style.display = 'none'; // Hide previous messages
+            responseMessageDiv.textContent = ''; // Clear previous text
+
+            try {
+                // Fetch to the Google Apps Script web app URL
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData // FormData handles multipart/form-data for us
+                });
+
+                const result = await response.text(); // Get response as text
+
+                if (response.ok) { // Check if the HTTP status is 2xx
+                    responseMessageDiv.textContent = 'Message sent successfully!';
+                    responseMessageDiv.className = 'success';
+                    form.reset(); // Clear the form
+                } else {
+                    // Attempt to parse result if it's JSON, otherwise display as text
+                    let errorMessage = 'Failed to send message.';
+                    try {
+                        const errorJson = JSON.parse(result);
+                        errorMessage += ' Error: ' + (errorJson.error || result);
+                    } catch (e) {
+                        errorMessage += ' Error: ' + result;
+                    }
+                    responseMessageDiv.textContent = errorMessage;
+                    responseMessageDiv.className = 'error';
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                responseMessageDiv.textContent = 'An error occurred while sending the message.';
+                responseMessageDiv.className = 'error';
+            } finally {
+                responseMessageDiv.style.display = 'block'; // Show the message
+            }
+        });
+    </script>
+
+
+
+
+	
 
 	<footer class="site-footer">
 		<div class="container">
