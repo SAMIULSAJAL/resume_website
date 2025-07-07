@@ -834,3 +834,13 @@ a {
 #old-projects-section {
   display: none;
 }
+
+/* get in touch section */
+#formResponseMessage.success {
+    background-color: #c6f6d5; /* green-100 */
+    color: #2f855a; /* green-700 */
+}
+#formResponseMessage.error {
+    background-color: #fed7d7; /* red-100 */
+    color: #c53030; /* red-700 */
+}
