@@ -17,6 +17,15 @@
     
 
 
+
+
+		
+
+
+
+
+
+
 </head>
 <body data-spy="scroll" data-target="#pb-navbar" data-offset="200">
 
@@ -363,16 +372,263 @@
 				</div>				
 
 
+				<!-- ---------------------- Skills Section --------------------- -->
+
+
+
+
+
+
+
+
 			</div>
 		</div>
 	</section>
 	
 	
 
+    <!-- ---------------------- Skills Section --------------------- -->
+    <!-- Place this entire <section> block directly inside your <body> tag, not inside another div or section -->
+    <section class="site-section" id="section-skills">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 mb-5">
+                    <div class="section-heading text-center">
+                        <h2 class="text-white">My <strong>Skills</strong></h2>
+                        <p class="text-gray-300 mt-2">A blend of academic rigor and practical application in data analysis.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row skills-row-custom"> <!-- Added custom class to target this row specifically -->
+                <!-- Left Column for Skills -->
+                <div class="col-md-6 col-lg-6 mb-4">
+                    <div class="skill-list-column">
+                        <div class="skill-item mb-4" data-percentage="90">
+                            <div class="skill-name-percentage">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item mb-4" data-percentage="80">
+                            <div class="skill-name-percentage">
+                                <span class="skill-name">R</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item mb-4" data-percentage="85">
+                            <div class="skill-name-percentage">
+                                <span class="skill-name">SQL</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item mb-4" data-percentage="75">
+                            <div class="skill-name-percentage">
+                                <span class="skill-name">MS Power BI</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item mb-4" data-percentage="95">
+                            <div class="skill-name-percentage">
+                                <span class="skill-name">Google Sheets</span>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item mb-4" data-percentage="90">
+                            <div class="skill-name-percentage">
+                                <span class="skill-name">MS Excel</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column for Skills -->
+                <div class="col-md-6 col-lg-6 mb-4">
+                    <div class="skill-list-column">
+                        <div class="skill-item mb-4" data-percentage="85">
+                            <div class="skill-name-percentage">
+                                <span class="skill-name">Statistical Data Analysis</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item mb-4" data-percentage="70">
+                            <div class="skill-name-percentage">
+                                <span class="skill-name">Linux OS</span>
+                                <span class="skill-percentage">70%</span>
+                            </div>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item mb-4" data-percentage="70">
+                            <div class="skill-name-percentage">
+                                <span class="skill-name">LaTeX</span>
+                                <span class="skill-percentage">70%</span>
+                            </div>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item mb-4" data-percentage="65">
+                            <div class="skill-name-percentage">
+                                <span class="skill-name">Mac OS</span>
+                                <span class="skill-percentage">65%</span>
+                            </div>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item mb-4" data-percentage="60">
+                            <div class="skill-name-percentage">
+                                <span class="skill-name">Photography</span>
+                                <span class="skill-percentage">60%</span>
+                            </div>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar"></div>
+                            </div>
+                        </div>
+                        <!-- You can add more skills here to balance the columns if needed -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add these styles to your existing <style> block in your <head> or a separate CSS file -->
+    <style>
+        /* General styling for the section title */
+        .section-heading h2 {
+            font-size: 2.5rem; /* Example: adjust as per your template's h2 */
+            font-weight: bold;
+            color: #f8f8f8; /* Changed for dark background */
+        }
+        .section-heading strong {
+            color: #ff8c00; /* Orange color for emphasis, matching image */
+        }
+        .section-heading p {
+            font-size: 1rem;
+            color: #b0b0b0; /* Changed for dark background */
+        }
+
+        /* Ensure the row containing skills stretches and columns are centered */
+        .site-section#section-skills .container {
+            max-width: 90%; /* Reduced max-width for more outer margin */
+            padding-left: 20px; /* Increased padding */
+            padding-right: 20px; /* Increased padding */
+            margin-left: auto; /* Center the container */
+            margin-right: auto; /* Center the container */
+        }
+
+        .site-section#section-skills .row.skills-row-custom {
+            margin-left: -15px; /* Re-add Bootstrap default negative margin for columns */
+            margin-right: -15px; /* Re-add Bootstrap default negative margin for columns */
+            justify-content: center; /* Center the columns within the row */
+        }
+
+        .site-section#section-skills .col-md-6,
+        .site-section#section-skills .col-lg-6 {
+            padding-left: 15px; /* Ensure columns have Bootstrap default padding */
+            padding-right: 15px; /* Ensure columns have Bootstrap default padding */
+        }
+
+
+        /* Skill List Column Styling (replaces skill-box for this layout) */
+        .skill-list-column {
+            /* No specific background or padding here, as per image, just a container for skills */
+            padding: 1rem; /* Add some internal padding if desired */
+        }
+
+        /* Individual Skill Item Styling */
+        .skill-item {
+            margin-bottom: 1.5rem; /* Increased spacing between skills as in the image */
+        }
+        .skill-name-percentage {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem; /* Space between name/percentage and bar */
+        }
+        .skill-name {
+            font-weight: 600;
+            color: #e0e0e0; /* Light color for dark background */
+            font-size: 1.1rem; /* Slightly larger text for skill names */
+        }
+        .skill-percentage {
+            font-size: 1rem; /* Slightly larger text for percentage */
+            color: #e0e0e0; /* Light color for dark background */
+            font-weight: 600;
+        }
+        .skill-bar-container {
+            width: 100%;
+            background-color: #555555; /* Darker grey for bar container, slightly less prominent */
+            border-radius: 9999px;
+            height: 0.3rem; /* Thinner bar */
+            overflow: hidden;
+        }
+        .skill-bar {
+            background-color: #ff8c00; /* Orange color for fill, matching image */
+            height: 100%;
+            border-radius: 9999px;
+            width: 0%; /* Initial state for animation */
+            transition: width 1.5s ease-out; /* Slower, smoother animation */
+        }
+
+        /* Class to trigger animation */
+        .skill-bar.animate {
+            /* Width will be set by JS based on data-percentage */
+        }
+    </style>
+
+    <!-- Add this JavaScript just before your closing </body> tag -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const skillSection = document.getElementById('section-skills');
+            const skillBars = skillSection.querySelectorAll('.skill-bar');
+            let hasAnimated = false; // Flag to ensure animation runs only once
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !hasAnimated) {
+                        skillBars.forEach(bar => {
+                            const percentage = bar.closest('.skill-item').dataset.percentage;
+                            bar.style.width = percentage + '%';
+                            bar.classList.add('animate'); // Add class if needed for additional effects
+                        });
+                        hasAnimated = true; // Set flag to true after animation
+                        observer.unobserve(entry.target); // Stop observing once animated
+                    }
+                });
+            }, { threshold: 0.5 }); // Trigger when 50% of the section is visible
+
+            observer.observe(skillSection);
+        });
+    </script>
 
 
 
-<!-- ---------------------- my projects--------------------- -->	
+	<!-- ---------------------- my projects--------------------- -->	
 	<div id="old-projects-section">
 		<section class="site-section" id="section-projects">
 			<div class="container">
@@ -463,7 +719,7 @@
 	</div>
 
 
-<!-- ---------------------- about me--------------------- -->	
+	<!-- ---------------------- about me--------------------- -->	
 
 	<section class="site-section" id="section-about">
 		<div class="container">
