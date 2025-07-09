@@ -435,8 +435,6 @@
 
 
 
-
-
 <style>
   /* Basic Reset and Font */
   body {
@@ -470,7 +468,9 @@
     color: #ffffff; /* text-white */
   }
 
-
+  .section-heading h2 strong {
+    color: #ca654c; /* Adjusted to match your provided color for strong tags */
+  }
 
   .section-heading p {
     color: #d1d5db; /* text-gray-300 */
@@ -487,8 +487,8 @@
   /* Flex Container for Columns */
   .thesis-content-flex {
     display: flex;
-    flex-direction: column; /* flex-col */
-    gap: 2rem; /* gap-8 */
+    flex-direction: column; /* flex-col (default for mobile) */
+    gap: 1.5rem; /* Reduced gap for tighter spacing */
     align-items: flex-start; /* items-start */
   }
 
@@ -522,15 +522,15 @@
   .thesis-text-column {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem; /* space-y-6 */
+    gap: 0.75rem; /* Reduced gap for tighter spacing */
   }
 
   .thesis-title {
     font-size: 1.25rem; /* text-xl */
     line-height: 1.25; /* leading-tight */
     font-weight: 800; /* font-extrabold */
-    color: #93c5fd; /* text-blue-300 */
-    margin-bottom: 1rem; /* mb-4 */
+    color: #ca654c; /* text-blue-300 (your preferred color) */
+    margin-bottom: 0.5rem; /* Reduced margin-bottom */
   }
 
   @media (min-width: 640px) { /* sm breakpoint */
@@ -553,6 +553,12 @@
     color: #ffffff; /* text-white */
   }
 
+  /* Full-Width Bullet Points Section */
+  .thesis-full-width-bullets {
+    margin-top: 2rem; /* Space above this section */
+    width: 100%; /* Ensure it takes full width */
+  }
+
   .thesis-bullet-section {
     display: flex;
     flex-direction: column;
@@ -563,6 +569,7 @@
   .thesis-bullet-section p {
     font-weight: 600; /* font-semibold */
     color: #ffffff; /* text-white */
+    margin-bottom: 0.5rem; /* Added margin for spacing with list */
   }
 
   .thesis-bullet-section ul {
@@ -576,7 +583,7 @@
   }
 
   .thesis-bullet-section ul strong {
-    color: #93c5fd; /* text-blue-300 */
+    color: #ca654c; /* text-blue-300 (your preferred color) */
   }
 
   .thesis-bullet-section ul ul {
@@ -588,7 +595,7 @@
   /* Right Column: Image Gallery */
   .thesis-gallery-column {
     overflow-x: scroll; /* overflow-x-auto */
-    padding-bottom: 1rem; /* pb-4 */
+    padding-bottom: 0; /* Removed padding-bottom as scrollbar is hidden */
     scroll-snap-type: x mandatory; /* Enable scroll snapping */
     display: flex; /* Ensure flexbox for image alignment */
     align-items: center; /* Vertically center images */
@@ -605,9 +612,10 @@
   .thesis-image-flex {
     display: flex;
     gap: 1rem; /* space-x-4 */
-    padding: 0 50%; /* Add padding to make first/last items center-snappable */
+    /* Adjusted padding to be smaller for better mobile fit, still allows centering */
+    padding: 0 20px; /* Smaller fixed padding */
     box-sizing: content-box; /* Ensure padding doesn't affect flex item sizing */
-    min-width: max-content; /* Ensure content doesn't wrap */
+    /* Removed min-width: max-content to prevent horizontal page overflow */
   }
 
   .thesis-image-wrapper {
@@ -626,7 +634,7 @@
     height: auto;
     border-radius: 0.5rem; /* rounded-lg */
     /* Removed box-shadow and border from image */
-    object-fit: contain; /* Ensure entire image is visible */
+    object-fit: contain; /* Ensure entire image is visible without cropping */
   }
 
   .thesis-image-caption {
@@ -649,20 +657,19 @@
     opacity: 1; /* Show on hover */
   }
 
-
   /* Read Full Paper Text Link */
   .thesis-read-more-link {
     display: block; /* block to take full width for centering */
     text-align: left; /* Align to left */
     margin-top: 1.5rem; /* mt-6 */
     font-size: 1rem; /* text-base */
-    color: #60a5fa; /* text-blue-400 */
+    color: #ca654c; /* text-blue-400 (your preferred color) */
     text-decoration: underline; /* Underline for link */
     transition: color 0.2s ease-in-out;
   }
 
   .thesis-read-more-link:hover {
-    color: #93c5fd; /* text-blue-300 on hover */
+    color: #d88a78; /* Lighter shade on hover, matching your scheme */
   }
 
   @media (min-width: 768px) { /* md breakpoint */
@@ -689,36 +696,6 @@
       <p class="thesis-paragraph">
         My Master's thesis investigated the <strong class="text-white">Pulsed Laser Ablation (PLAL)</strong> method for synthesizing metallic nanoparticles, with a focus on <strong class="text-white">Aluminum Nanoparticles (ANPs)</strong>.
       </p>
-
-      <div class="thesis-bullet-section">
-        <p>Here's what I explored and achieved:</p>
-        <ul>
-          <li>
-            <strong class="text-blue-300">Simulated Nanoparticle Formation:</strong> Conducted <strong class="text-white">Molecular Dynamics (MD) simulations</strong> using the <strong class="text-white">ReaxFF reactive force field</strong> in LAMMPS to analyze the phase transition and behavior of aluminum (Al) nanoparticles.
-          </li>
-          <li>
-            <strong class="text-blue-300">Investigated Temperature Dependence:</strong> Examined the impact of varying temperature decrease rates (0.1, 0.3, 0.5, 1.0, and 10.0 K/ps) on ANP formation from an initial plasma state of 5000 K down to 300 K.
-          </li>
-          <li>
-            <strong class="text-blue-300">Analyzed Nanoparticle Characteristics:</strong>
-            <ul>
-              <li>Quantified nanoparticle formation rates and growth of the biggest nanoparticles.</li>
-              <li>Performed neighbor analysis to understand particle attachment and stability within clusters.</li>
-              <li>Determined the size and structural properties of ANPs using cluster analysis and Polyhedral Template Matching (PTM).</li>
-              <li>Described physical properties (volume, density, energy) to validate simulation stability.</li>
-            </ul>
-          </li>
-          <li>
-            <strong class="text-blue-300">Compared Simulation Outcomes:</strong> Provided a comparative analysis of nanoparticle count, size (by particle number, mesh surface, and diameter), and size distribution across different cooling rates.
-          </li>
-          <li>
-            <strong class="text-blue-300">Key Finding:</strong> Demonstrated that the <strong class="text-white">rate of nanoparticle formation and their ultimate size are directly influenced by the pace of temperature drop</strong>, suggesting a powerful mechanism for controlling PLAL synthesis efficiency.
-          </li>
-          <li>
-            <strong class="text-blue-300">Bridged Experimental Gaps:</strong> Highlighted how MD simulations can overcome limitations in traditional experimental analysis of metallic behavior at high temperatures and in plasma states.
-          </li>
-        </ul>
-      </div>
 
       <!-- Read Full Paper Text Link (moved here for left alignment) -->
       <a href="https://www.researchgate.net/publication/372522453_MSc_Thesis_Final?channel=doi&linkId=64bbfa5e95bbbe0c6e5421b6&showFulltext=true"
@@ -761,6 +738,39 @@
       </div>
     </div>
   </div>
+
+  <!-- New Full-Width Section for Detailed Bullet Points -->
+  <div class="thesis-full-width-bullets">
+    <div class="thesis-bullet-section">
+      <p>Here's what I explored and achieved:</p>
+      <ul>
+        <li>
+          <strong class="text-blue-300">Simulated Nanoparticle Formation:</strong> Conducted <strong class="text-white">Molecular Dynamics (MD) simulations</strong> using the <strong class="text-white">ReaxFF reactive force field</strong> in LAMMPS to analyze the phase transition and behavior of aluminum (Al) nanoparticles.
+        </li>
+        <li>
+          <strong class="text-blue-300">Investigated Temperature Dependence:</strong> Examined the impact of varying temperature decrease rates (0.1, 0.3, 0.5, 1.0, and 10.0 K/ps) on ANP formation from an initial plasma state of 5000 K down to 300 K.
+        </li>
+        <li>
+          <strong class="text-blue-300">Analyzed Nanoparticle Characteristics:</strong>
+          <ul>
+            <li>Quantified nanoparticle formation rates and growth of the biggest nanoparticles.</li>
+            <li>Performed neighbor analysis to understand particle attachment and stability within clusters.</li>
+            <li>Determined the size and structural properties of ANPs using cluster analysis and Polyhedral Template Matching (PTM).</li>
+            <li>Described physical properties (volume, density, energy) to validate simulation stability.</li>
+          </ul>
+        </li>
+        <li>
+          <strong class="text-blue-300">Compared Simulation Outcomes:</strong> Provided a comparative analysis of nanoparticle count, size (by particle number, mesh surface, and diameter), and size distribution across different cooling rates.
+        </li>
+        <li>
+          <strong class="text-blue-300">Key Finding:</strong> Demonstrated that the <strong class="text-white">rate of nanoparticle formation and their ultimate size are directly influenced by the pace of temperature drop</strong>, suggesting a powerful mechanism for controlling PLAL synthesis efficiency.
+        </li>
+        <li>
+          <strong class="text-blue-300">Bridged Experimental Gaps:</strong> Highlighted how MD simulations can overcome limitations in traditional experimental analysis of metallic behavior at high temperatures and in plasma states.
+        </li>
+      </ul>
+    </div>
+  </div>
 </section>
 
 <script>
@@ -781,11 +791,11 @@
 
         // Normalize distance to a 0-1 range, where 0 is center, 1 is edge
         // Max distance is half the gallery width plus half an image width (approx)
-        const maxDistance = galleryRect.width / 2 + imageRect.width / 2;
+        // Using galleryRect.width / 2 as a base for maxDistance to ensure scaling over the visible area
+        const maxDistance = galleryRect.width / 2;
         const normalizedDistance = Math.min(1, distance / maxDistance);
 
         // Scale factor: closer to 1 at center, smaller towards edges
-        // Using a cosine function or similar for a smooth falloff
         const scale = 1 - (normalizedDistance * 0.3); // Adjust 0.3 for desired min scale (e.g., 0.3 means scales down to 70%)
 
         wrapper.style.transform = `scale(${scale})`;
@@ -798,7 +808,6 @@
     window.addEventListener('resize', updateImageScale); // Recalculate on resize
   });
 </script>
-
 
 
 
