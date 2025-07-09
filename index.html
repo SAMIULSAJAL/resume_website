@@ -201,11 +201,11 @@
 			</a>
 			<a href="https://github.com/SAMIULSAJAL/moon_dance" target="_blank" class="small-project-card">
 				<h4>Moon Dance (using Python)</h4>
-				<p>-----</p>
+				<p>Simulated the Earth-Moon system using Python’s odeint from SciPy to solve differential equations. Visualized the Moon’s orbit and phase evolution assuming a fixed Sun-Earth axis. Included animated trajectories and dynamic moon phase rendering.</p>
 			</a>
 			<a href="https://github.com/SAMIULSAJAL/The_incredible_machine" target="_blank" class="small-project-card">
 				<h4>The incredible machine</h4>
-				<p>--------</p>
+				<p>A Python simulation inspired by the classic game, modeling particles moving under forces like gravity and interacting with walls. Built with modular classes, it allows customizable setups and real-time animation of physical behaviors.</p>
 			</a>
 			<a href="https://github.com/SAMIULSAJAL/arctic_ice_map" target="_blank" class="small-project-card">
 				<h4>Arctic Ice Map Analysis</h4>
@@ -429,6 +429,396 @@
 	</section>
 	
 	
+
+
+
+
+
+
+
+
+<style>
+  /* Basic Reset and Font */
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif; /* Fallback to sans-serif if Inter isn't loaded */
+  }
+
+  /* Inter Font Import (ensure this is in your main HTML <head> for global use) */
+  /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap'); */
+
+  /* Section Container */
+  .thesis-section-container {
+    max-width: 1280px; /* Equivalent to container max-w-7xl, adjust as needed */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3rem 1rem; /* py-12 px-4 */
+    color: #e5e7eb; /* text-gray-200 */
+    /* Removed background-color for transparent effect and box-shadow */
+    border-radius: 0.5rem; /* rounded-lg */
+  }
+
+  /* Main Section Title Styling (matching "My Skills" header) */
+  .section-heading {
+    text-align: center;
+    margin-bottom: 2rem; /* mb-8 */
+  }
+
+  .section-heading h2 {
+    font-size: 2.5rem; /* text-4xl */
+    font-weight: 800; /* font-extrabold */
+    color: #ffffff; /* text-white */
+  }
+
+
+
+  .section-heading p {
+    color: #d1d5db; /* text-gray-300 */
+    margin-top: 0.5rem; /* mt-2 */
+    font-size: 1rem;
+  }
+
+  @media (min-width: 768px) { /* md breakpoint */
+    .section-heading h2 {
+      font-size: 3rem; /* md:text-5xl */
+    }
+  }
+
+  /* Flex Container for Columns */
+  .thesis-content-flex {
+    display: flex;
+    flex-direction: column; /* flex-col */
+    gap: 2rem; /* gap-8 */
+    align-items: flex-start; /* items-start */
+  }
+
+  /* Media queries for responsiveness (md and lg breakpoints) */
+  @media (min-width: 768px) { /* md breakpoint */
+    .thesis-section-container {
+      padding-top: 4rem; /* md:py-16 */
+      padding-bottom: 4rem; /* md:py-16 */
+    }
+    .thesis-content-flex {
+      flex-direction: row; /* md:flex-row */
+      gap: 3rem; /* lg:gap-12 (using for md and up for simplicity) */
+    }
+    /* Adjusted column widths for better balance */
+    .thesis-text-column {
+      width: 58.3333%; /* md:w-7/12 */
+    }
+    .thesis-gallery-column {
+      width: 41.6667%; /* md:w-5/12 */
+    }
+  }
+
+  @media (min-width: 1024px) { /* lg breakpoint */
+    .thesis-section-container {
+      padding-top: 5rem; /* lg:py-20 */
+      padding-bottom: 5rem; /* lg:py-20 */
+    }
+  }
+
+  /* Left Column: Thesis Description Text */
+  .thesis-text-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* space-y-6 */
+  }
+
+  .thesis-title {
+    font-size: 1.25rem; /* text-xl */
+    line-height: 1.25; /* leading-tight */
+    font-weight: 800; /* font-extrabold */
+    color: #93c5fd; /* text-blue-300 */
+    margin-bottom: 1rem; /* mb-4 */
+  }
+
+  @media (min-width: 640px) { /* sm breakpoint */
+    .thesis-title {
+      font-size: 1.5rem; /* sm:text-2xl */
+    }
+  }
+  @media (min-width: 1024px) { /* lg breakpoint */
+    .thesis-title {
+      font-size: 1.75rem; /* lg:text-3xl */
+    }
+  }
+
+  .thesis-paragraph {
+    font-size: 1.125rem; /* text-lg */
+    line-height: 1.625; /* leading-relaxed */
+  }
+
+  .thesis-paragraph strong {
+    color: #ffffff; /* text-white */
+  }
+
+  .thesis-bullet-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* space-y-4 */
+    font-size: 1rem; /* text-base */
+  }
+
+  .thesis-bullet-section p {
+    font-weight: 600; /* font-semibold */
+    color: #ffffff; /* text-white */
+  }
+
+  .thesis-bullet-section ul {
+    list-style-type: disc; /* list-disc */
+    padding-left: 1rem; /* pl-4 */
+    margin-left: 1rem; /* For visual indentation */
+    list-style-position: inside; /* list-inside */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* space-y-2 */
+  }
+
+  .thesis-bullet-section ul strong {
+    color: #93c5fd; /* text-blue-300 */
+  }
+
+  .thesis-bullet-section ul ul {
+    list-style-type: circle; /* list-circle */
+    margin-left: 1rem; /* ml-4 */
+    gap: 0.25rem; /* space-y-1 */
+  }
+
+  /* Right Column: Image Gallery */
+  .thesis-gallery-column {
+    overflow-x: scroll; /* overflow-x-auto */
+    padding-bottom: 1rem; /* pb-4 */
+    scroll-snap-type: x mandatory; /* Enable scroll snapping */
+    display: flex; /* Ensure flexbox for image alignment */
+    align-items: center; /* Vertically center images */
+    height: 300px; /* Fixed height for consistent alignment */
+    /* Hide scrollbar for all browsers */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  .thesis-gallery-column::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
+  .thesis-image-flex {
+    display: flex;
+    gap: 1rem; /* space-x-4 */
+    padding: 0 50%; /* Add padding to make first/last items center-snappable */
+    box-sizing: content-box; /* Ensure padding doesn't affect flex item sizing */
+    min-width: max-content; /* Ensure content doesn't wrap */
+  }
+
+  .thesis-image-wrapper {
+    flex-shrink: 0; /* flex-shrink-0 */
+    scroll-snap-align: center; /* Snap to center */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-out; /* Smooth transition for scaling */
+    position: relative; /* For caption positioning */
+  }
+
+  .thesis-image-wrapper img {
+    max-width: 100%; /* Ensure images don't overflow their wrapper */
+    max-height: 250px; /* Constrain image height within the gallery height */
+    height: auto;
+    border-radius: 0.5rem; /* rounded-lg */
+    /* Removed box-shadow and border from image */
+    object-fit: contain; /* Ensure entire image is visible */
+  }
+
+  .thesis-image-caption {
+    position: absolute; /* Position caption relative to wrapper */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.5rem; /* p-2 */
+    font-size: 0.75rem; /* text-xs */
+    text-align: center; /* text-center */
+    background-color: rgba(31, 41, 55, 0.8); /* bg-gray-800 with transparency */
+    color: #d1d5db; /* text-gray-300 */
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    opacity: 0; /* Hide by default */
+    transition: opacity 0.3s ease-out;
+  }
+
+  .thesis-image-wrapper:hover .thesis-image-caption {
+    opacity: 1; /* Show on hover */
+  }
+
+
+  /* Read Full Paper Text Link */
+  .thesis-read-more-link {
+    display: block; /* block to take full width for centering */
+    text-align: left; /* Align to left */
+    margin-top: 1.5rem; /* mt-6 */
+    font-size: 1rem; /* text-base */
+    color: #60a5fa; /* text-blue-400 */
+    text-decoration: underline; /* Underline for link */
+    transition: color 0.2s ease-in-out;
+  }
+
+  .thesis-read-more-link:hover {
+    color: #93c5fd; /* text-blue-300 on hover */
+  }
+
+  @media (min-width: 768px) { /* md breakpoint */
+    .thesis-read-more-link {
+      text-align: left; /* Keep left aligned on larger screens */
+    }
+  }
+</style>
+
+<!-- MSc Thesis Project Section Container -->
+<section class="thesis-section-container">
+  <div class="section-heading">
+    <h2 class="text-white">Research <strong>Experience</strong></h2>
+    <p class="text-gray-300 mt-2">A deep dive into advanced materials simulation and analysis.</p>
+  </div>
+
+  <div class="thesis-content-flex">
+
+    <!-- Left Column: Thesis Description Text -->
+    <div class="thesis-text-column">
+      <h2 class="thesis-title">
+        Master's Thesis: Understanding Metallic Nanoparticle Synthesis
+      </h2>
+      <p class="thesis-paragraph">
+        My Master's thesis investigated the <strong class="text-white">Pulsed Laser Ablation (PLAL)</strong> method for synthesizing metallic nanoparticles, with a focus on <strong class="text-white">Aluminum Nanoparticles (ANPs)</strong>.
+      </p>
+
+      <div class="thesis-bullet-section">
+        <p>Here's what I explored and achieved:</p>
+        <ul>
+          <li>
+            <strong class="text-blue-300">Simulated Nanoparticle Formation:</strong> Conducted <strong class="text-white">Molecular Dynamics (MD) simulations</strong> using the <strong class="text-white">ReaxFF reactive force field</strong> in LAMMPS to analyze the phase transition and behavior of aluminum (Al) nanoparticles.
+          </li>
+          <li>
+            <strong class="text-blue-300">Investigated Temperature Dependence:</strong> Examined the impact of varying temperature decrease rates (0.1, 0.3, 0.5, 1.0, and 10.0 K/ps) on ANP formation from an initial plasma state of 5000 K down to 300 K.
+          </li>
+          <li>
+            <strong class="text-blue-300">Analyzed Nanoparticle Characteristics:</strong>
+            <ul>
+              <li>Quantified nanoparticle formation rates and growth of the biggest nanoparticles.</li>
+              <li>Performed neighbor analysis to understand particle attachment and stability within clusters.</li>
+              <li>Determined the size and structural properties of ANPs using cluster analysis and Polyhedral Template Matching (PTM).</li>
+              <li>Described physical properties (volume, density, energy) to validate simulation stability.</li>
+            </ul>
+          </li>
+          <li>
+            <strong class="text-blue-300">Compared Simulation Outcomes:</strong> Provided a comparative analysis of nanoparticle count, size (by particle number, mesh surface, and diameter), and size distribution across different cooling rates.
+          </li>
+          <li>
+            <strong class="text-blue-300">Key Finding:</strong> Demonstrated that the <strong class="text-white">rate of nanoparticle formation and their ultimate size are directly influenced by the pace of temperature drop</strong>, suggesting a powerful mechanism for controlling PLAL synthesis efficiency.
+          </li>
+          <li>
+            <strong class="text-blue-300">Bridged Experimental Gaps:</strong> Highlighted how MD simulations can overcome limitations in traditional experimental analysis of metallic behavior at high temperatures and in plasma states.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Read Full Paper Text Link (moved here for left alignment) -->
+      <a href="https://www.researchgate.net/publication/372522453_MSc_Thesis_Final?channel=doi&linkId=64bbfa5e95bbbe0c6e5421b6&showFulltext=true"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="thesis-read-more-link">
+        Read the full thesis paper on ResearchGate
+      </a>
+    </div>
+
+    <!-- Right Column: Image Gallery (Horizontally Scrollable) -->
+    <div class="thesis-gallery-column" id="imageGallery">
+      <div class="thesis-image-flex">
+        <!-- Image 1 -->
+        <div class="thesis-image-wrapper">
+          <img src="images/research_experience/image1.png" alt="Thesis Image 1: Initial Configuration" onerror="this.onerror=null;this.src='https://placehold.co/600x400/333333/FFFFFF?text=Image%201';">
+          <p class="thesis-image-caption">Initial simulation setup</p>
+        </div>
+        <!-- Image 2 -->
+        <div class="thesis-image-wrapper">
+          <img src="images/research_experience/image2.png" alt="Thesis Image 2: Nanoparticle Formation" onerror="this.onerror=null;this.src='https://placehold.co/600x400/333333/FFFFFF?text=Image%202';">
+          <p class="thesis-image-caption">Nanoparticle formation over time</p>
+        </div>
+        <!-- Image 3 -->
+        <div class="thesis-image-wrapper">
+          <img src="images/research_experience/image3.png" alt="Thesis Image 3: Structural Analysis" onerror="this.onerror=null;this.src='https://placehold.co/600x400/333333/FFFFFF?text=Image%203';">
+          <p class="thesis-image-caption">Structural analysis of ANPs</p>
+        </div>
+        <!-- Image 4 -->
+        <div class="thesis-image-wrapper">
+          <img src="images/research_experience/image4.png" alt="Thesis Image 4: Temperature Rate Comparison" onerror="this.onerror=null;this.src='https://placehold.co/600x400/333333/FFFFFF?text=Image%204';">
+          <p class="thesis-image-caption">Effect of temperature decrease rate</p>
+        </div>
+        <!-- Image 5 -->
+        <div class="thesis-image-wrapper">
+          <img src="images/research_experience/image5.png" alt="Thesis Image 5: Final Nanoparticle State" onerror="this.onerror=null;this.src='https://placehold.co/600x400/333333/FFFFFF?text=Image%205';">
+          <p class="thesis-image-caption">Final state of synthesized nanoparticles</p>
+        </div>
+        <!-- Add more image divs here following the same structure if needed (up to 8) -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const gallery = document.getElementById('imageGallery');
+    const imageWrappers = gallery.querySelectorAll('.thesis-image-wrapper');
+
+    const updateImageScale = () => {
+      const galleryRect = gallery.getBoundingClientRect();
+      const galleryCenterX = galleryRect.left + galleryRect.width / 2;
+
+      imageWrappers.forEach(wrapper => {
+        const imageRect = wrapper.getBoundingClientRect();
+        const imageCenterX = imageRect.left + imageRect.width / 2;
+
+        // Calculate distance from the center of the gallery
+        const distance = Math.abs(galleryCenterX - imageCenterX);
+
+        // Normalize distance to a 0-1 range, where 0 is center, 1 is edge
+        // Max distance is half the gallery width plus half an image width (approx)
+        const maxDistance = galleryRect.width / 2 + imageRect.width / 2;
+        const normalizedDistance = Math.min(1, distance / maxDistance);
+
+        // Scale factor: closer to 1 at center, smaller towards edges
+        // Using a cosine function or similar for a smooth falloff
+        const scale = 1 - (normalizedDistance * 0.3); // Adjust 0.3 for desired min scale (e.g., 0.3 means scales down to 70%)
+
+        wrapper.style.transform = `scale(${scale})`;
+      });
+    };
+
+    // Initial update and update on scroll
+    updateImageScale();
+    gallery.addEventListener('scroll', updateImageScale);
+    window.addEventListener('resize', updateImageScale); // Recalculate on resize
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- ---------------------- Skills Section --------------------- -->
     <!-- Place this entire <section> block directly inside your <body> tag, not inside another div or section -->
