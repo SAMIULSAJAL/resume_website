@@ -25,6 +25,7 @@
 
 
 
+	<!-- start for research experience -->
 
 	<style>
 	/* Basic Reset and Font */
@@ -268,7 +269,7 @@
 	}
 	</style>
 
-
+	<!-- end for research experience -->
 
 
 
@@ -348,7 +349,7 @@
 					onmouseout="this.style.transform='translate(0,0)'; this.style.boxShadow='0 0 10px rgba(0,0,0,0.5)';">
 
 					<!-- Left side -->
-					<div class="col-md-5 d-flex flex-column" style="background-color: #1b1f29; border-radius: 8px 0 0 8px; padding: 20px; color: #d21a1a;">
+					<div class="col-md-5 d-flex flex-column" style="border-radius: 8px 0 0 8px; padding: 20px; color: #d21a1a;">
 						<img src="images/business-automation-thumbnail.png" alt="Google Sheets & Excel Project" class="img-fluid mb-3" style="border-radius: 6px;">
 						<h3 style="color: #ca654c;">Business Automation with Google Sheets & MS Excel </h3>
 						<div class="mt-auto">
@@ -359,7 +360,7 @@
 					</div>
 
 					<!-- Right side -->
-					<div class="col-md-7" style="background-color: #2a2e3e; border-radius: 0 8px 8px 0; padding: 30px; color: rgb(132, 129, 129);">
+					<div class="col-md-7" style=" border-radius: 0 8px 8px 0; padding: 30px; color: rgb(132, 129, 129);">
 						<div class="row">
 							<div class="col-md-6">
 								<h5>Spreadsheet Skills</h5>
@@ -402,7 +403,7 @@
 					onmouseout="this.style.transform='translate(0,0)'; this.style.boxShadow='0 0 10px rgba(0,0,0,0.5)';">
 
 					<!-- Left side with GIF thumbnail -->
-					<div class="col-md-5 d-flex flex-column" style="background-color: #1b1f29; border-radius: 8px 0 0 8px; padding: 20px; color: white;">
+					<div class="col-md-5 d-flex flex-column" style=" border-radius: 8px 0 0 8px; padding: 20px; color: white;">
 						<img src="images/portfolio/moons_orbits.gif" alt="Three Body Simulation Thumbnail" class="img-fluid mb-3" style="border-radius: 6px;">
 						<h4 style="color: #ca654c;">Three-Body Problem: Saturn, Janus & Epimetheus</h4>
 						<div class="mt-auto">
@@ -412,7 +413,7 @@
 					</div>
 
 					<!-- Right side with quick skill summary -->
-					<div class="col-md-7" style="background-color: #2a2e3e; border-radius: 0 8px 8px 0; padding: 30px; color: rgb(132, 129, 129);">
+					<div class="col-md-7" style="border-radius: 0 8px 8px 0; padding: 30px; color: rgb(132, 129, 129);">
 						<div class="row">
 							<div class="col-md-6">
 								<h5>Technical Skills</h5>
@@ -810,43 +811,43 @@
 
 
 
+	<!-- script for research experience -->
+	<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const gallery = document.getElementById('imageGallery');
+		const imageWrappers = gallery.querySelectorAll('.thesis-image-wrapper');
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const gallery = document.getElementById('imageGallery');
-    const imageWrappers = gallery.querySelectorAll('.thesis-image-wrapper');
+		const updateImageScale = () => {
+		const galleryRect = gallery.getBoundingClientRect();
+		const galleryCenterX = galleryRect.left + galleryRect.width / 2;
 
-    const updateImageScale = () => {
-      const galleryRect = gallery.getBoundingClientRect();
-      const galleryCenterX = galleryRect.left + galleryRect.width / 2;
+		imageWrappers.forEach(wrapper => {
+			const imageRect = wrapper.getBoundingClientRect();
+			const imageCenterX = imageRect.left + imageRect.width / 2;
 
-      imageWrappers.forEach(wrapper => {
-        const imageRect = wrapper.getBoundingClientRect();
-        const imageCenterX = imageRect.left + imageRect.width / 2;
+			// Calculate distance from the center of the gallery
+			const distance = Math.abs(galleryCenterX - imageCenterX);
 
-        // Calculate distance from the center of the gallery
-        const distance = Math.abs(galleryCenterX - imageCenterX);
+			// Normalize distance to a 0-1 range, where 0 is center, 1 is edge
+			// Max distance is half the gallery width plus half an image width (approx)
+			// Using galleryRect.width / 2 as a base for maxDistance to ensure scaling over the visible area
+			const maxDistance = galleryRect.width / 2;
+			const normalizedDistance = Math.min(1, distance / maxDistance);
 
-        // Normalize distance to a 0-1 range, where 0 is center, 1 is edge
-        // Max distance is half the gallery width plus half an image width (approx)
-        // Using galleryRect.width / 2 as a base for maxDistance to ensure scaling over the visible area
-        const maxDistance = galleryRect.width / 2;
-        const normalizedDistance = Math.min(1, distance / maxDistance);
+			// Scale factor: closer to 1 at center, smaller towards edges
+			const scale = 1 - (normalizedDistance * 0.3); // Adjust 0.3 for desired min scale (e.g., 0.3 means scales down to 70%)
 
-        // Scale factor: closer to 1 at center, smaller towards edges
-        const scale = 1 - (normalizedDistance * 0.3); // Adjust 0.3 for desired min scale (e.g., 0.3 means scales down to 70%)
+			wrapper.style.transform = `scale(${scale})`;
+		});
+		};
 
-        wrapper.style.transform = `scale(${scale})`;
-      });
-    };
-
-    // Initial update and update on scroll
-    updateImageScale();
-    gallery.addEventListener('scroll', updateImageScale);
-    window.addEventListener('resize', updateImageScale); // Recalculate on resize
-  });
-</script>
-
+		// Initial update and update on scroll
+		updateImageScale();
+		gallery.addEventListener('scroll', updateImageScale);
+		window.addEventListener('resize', updateImageScale); // Recalculate on resize
+	});
+	</script>
+	<!-- script for research experience -->
 
 
 
@@ -1106,97 +1107,6 @@
         });
     </script>
 
-
-
-	<!-- ---------------------- my projects--------------------- -->	
-	<div id="old-projects-section">
-		<section class="site-section" id="section-projects">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 mb-5">
-						<div class="section-heading text-center">
-							<h2>My <strong>Projects</strong></h2>
-						</div>
-					</div>
-					
-					<!-- Business Analytics Projects -->
-					<div class="col-md-12">
-						<h2 class="mb-5">Business Analytics Project - Automated Financial Analysis System</h2>
-		
-						<div class="row">
-							<!-- Left Side: Task Details -->
-							<div class="col-md-6">
-								<a href="your-project-link-here" class="project-box-link">
-									<div class="resume-item mb-4">
-										<h3>Project Details</h3>
-										<p class="school">Developed an automated system to handle sales, purchases, salary, and attendance tracking for a family-owned business. I created a dynamic monthly and yearly dashboard for visualizing data, tracked inventory, and automated salary deductions based on attendance records.</p>
-									</div>
-								</a>
-							</div>
-		
-							<!-- Right Side: Keywords -->
-							<div class="col-md-6">
-								<a href="your-project-link-here" class="project-box-link">
-									<div class="resume-item mb-4">
-										<h3>Technologies & Skills Used</h3>
-										<ul class="school">
-											<li>Data Query</li>
-											<li>Pivot Tables</li>
-											<li>App Script</li>
-											<li>Sheetgo</li>
-											<li>VLOOKUP</li>
-											<li>Charts</li>
-										</ul>
-									</div>
-								</a>
-							</div>
-						</div>
-					</div>
-		
-					<!-- Additional Projects -->
-					<div class="col-md-12 mb-4">
-						<h2>Additional Projects</h2>
-					</div>
-		
-					<div class="col-md-4">
-						<a href="your-project-link-here" class="project-box-link">
-							<div class="resume-item mb-4">
-								<h3>Lab Report Data Analysis</h3>
-								<p class="school">Analyzed experimental data from lab reports, including statistical analysis and visualization using Python and R.</p>
-								<ul class="school">
-									<li>Technologies & Skills Used: Python, R, Pandas, Matplotlib, Statistical Analysis</li>
-								</ul>
-							</div>
-						</a>
-					</div>
-		
-					<div class="col-md-4">
-						<a href="your-project-link-here" class="project-box-link">
-							<div class="resume-item mb-4">
-								<h3>Sales Forecasting Model</h3>
-								<p class="school">Built a predictive sales forecasting model using historical data to improve inventory and supply chain management for a local retailer.</p>
-								<ul class="school">
-									<li>Technologies & Skills Used: Excel, Linear Regression, Time Series Analysis, Forecasting</li>
-								</ul>
-							</div>
-						</a>
-					</div>
-		
-					<div class="col-md-4">
-						<a href="your-project-link-here" class="project-box-link">
-							<div class="resume-item mb-4">
-								<h3>Customer Segmentation Analysis</h3>
-								<p class="school">Used clustering algorithms to segment customers based on purchasing behavior to enhance marketing strategies and customer retention.</p>
-								<ul class="school">
-									<li>Technologies & Skills Used: Python, K-Means Clustering, Data Preprocessing, Matplotlib</li>
-								</ul>
-							</div>
-						</a>
-					</div>
-				</div>
-			</div>
-		</section>
-	</div>
 
 
 	<!-- ---------------------- about me--------------------- -->	
