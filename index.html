@@ -27,247 +27,291 @@
 
 	<!-- start for research experience -->
 
-	<style>
-	/* Basic Reset and Font */
-	body {
-		margin: 0;
-		font-family: 'Inter', sans-serif; /* Fallback to sans-serif if Inter isn't loaded */
-	}
+<style>
+  /* Basic Reset and Font */
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif; /* Fallback to sans-serif if Inter isn't loaded */
+  }
 
-	/* Inter Font Import (ensure this is in your main HTML <head> for global use) */
-	/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap'); */
+  /* Inter Font Import (ensure this is in your main HTML <head> for global use) */
+  /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap'); */
 
-	/* Section Container */
-	.thesis-section-container {
-		max-width: 1280px; /* Equivalent to container max-w-7xl, adjust as needed */
-		margin-left: auto;
-		margin-right: auto;
-		padding: 3rem 1rem; /* py-12 px-4 */
-		color: #e5e7eb; /* text-gray-200 */
-		/* Removed background-color for transparent effect and box-shadow */
-		border-radius: 0.5rem; /* rounded-lg */
-	}
+  /* Section Container */
+  .thesis-section-container {
+    max-width: 1280px; /* Equivalent to container max-w-7xl, adjust as needed */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3rem 1rem; /* py-12 px-4 */
+    color: #e5e7eb; /* text-gray-200 */
+    /* Removed background-color for transparent effect and box-shadow */
+    border-radius: 0.5rem; /* rounded-lg */
+  }
 
-	/* Main Section Title Styling (matching "My Skills" header) */
-	.section-heading {
-		text-align: center;
-		margin-bottom: 2rem; /* mb-8 */
-	}
+  /* Main Section Title Styling (matching "My Skills" header) */
+  .section-heading {
+    text-align: center;
+    margin-bottom: 2rem; /* mb-8 */
+  }
 
-	.section-heading h2 {
-		font-size: 2.5rem; /* text-4xl */
-		font-weight: 800; /* font-extrabold */
-		color: #ffffff; /* text-white */
-	}
+  .section-heading h2 {
+    font-size: 2.5rem; /* text-4xl */
+    font-weight: 800; /* font-extrabold */
+    color: #ffffff; /* text-white */
+  }
 
-	.section-heading h2 strong {
-		color: #ca654c; /* Adjusted to match your provided color for strong tags */
-	}
+  .section-heading h2 strong {
+    color: #ca654c; /* Adjusted to match your provided color for strong tags */
+  }
 
-	.section-heading p {
-		color: #d1d5db; /* text-gray-300 */
-		margin-top: 0.5rem; /* mt-2 */
-		font-size: 1rem;
-	}
+  .section-heading p {
+    color: #d1d5db; /* text-gray-300 */
+    margin-top: 0.5rem; /* mt-2 */
+    font-size: 1rem;
+  }
 
-	@media (min-width: 768px) { /* md breakpoint */
-		.section-heading h2 {
-		font-size: 3rem; /* md:text-5xl */
-		}
-	}
+  @media (min-width: 768px) { /* md breakpoint */
+    .section-heading h2 {
+      font-size: 3rem; /* md:text-5xl */
+    }
+  }
 
-	/* Flex Container for Columns */
-	.thesis-content-flex {
-		display: flex;
-		flex-direction: column; /* flex-col (default for mobile) */
-		gap: 1.5rem; /* Reduced gap for tighter spacing */
-		align-items: flex-start; /* items-start */
-	}
+  /* Flex Container for Columns */
+  .thesis-content-flex {
+    display: flex;
+    flex-direction: column; /* flex-col (default for mobile) */
+    gap: 1.5rem; /* Reduced gap for tighter spacing */
+    align-items: flex-start; /* items-start */
+  }
 
-	/* Media queries for responsiveness (md and lg breakpoints) */
-	@media (min-width: 768px) { /* md breakpoint */
-		.thesis-section-container {
-		padding-top: 4rem; /* md:py-16 */
-		padding-bottom: 4rem; /* md:py-16 */
-		}
-		.thesis-content-flex {
-		flex-direction: row; /* md:flex-row */
-		gap: 3rem; /* lg:gap-12 (using for md and up for simplicity) */
-		}
-		/* Adjusted column widths for better balance */
-		.thesis-text-column {
-		width: 58.3333%; /* md:w-7/12 */
-		}
-		.thesis-gallery-column {
-		width: 41.6667%; /* md:w-5/12 */
-		}
-	}
+  /* Media queries for responsiveness (md and lg breakpoints) */
+  @media (min-width: 768px) { /* md breakpoint */
+    .thesis-section-container {
+      padding-top: 4rem; /* md:py-16 */
+      padding-bottom: 4rem; /* md:py-16 */
+    }
+    .thesis-content-flex {
+      flex-direction: row; /* md:flex-row */
+      gap: 3rem; /* lg:gap-12 (using for md and up for simplicity) */
+    }
+    /* Adjusted column widths for better balance */
+    .thesis-text-column {
+      width: 58.3333%; /* md:w-7/12 */
+    }
+    .thesis-gallery-column {
+      width: 41.6667%; /* md:w-5/12 */
+    }
+  }
 
-	@media (min-width: 1024px) { /* lg breakpoint */
-		.thesis-section-container {
-		padding-top: 5rem; /* lg:py-20 */
-		padding-bottom: 5rem; /* lg:py-20 */
-		}
-	}
+  @media (min-width: 1024px) { /* lg breakpoint */
+    .thesis-section-container {
+      padding-top: 5rem; /* lg:py-20 */
+      padding-bottom: 5rem; /* lg:py-20 */
+    }
+  }
 
-	/* Left Column: Thesis Description Text */
-	.thesis-text-column {
-		display: flex;
-		flex-direction: column;
-		gap: 0.75rem; /* Reduced gap for tighter spacing */
-	}
+  /* Left Column: Thesis Description Text */
+  .thesis-text-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem; /* Reduced gap for tighter spacing */
+  }
 
-	.thesis-title {
-		font-size: 1.4rem; /* text-xl */
-		line-height: 1.25; /* leading-tight */
-		color: #ca654c; /* text-blue-300 (your preferred color) */
-	}
+  .thesis-title {
+    font-size: 1.4rem; /* text-xl */
+    line-height: 1.25; /* leading-tight */
+    font-weight: 800; /* font-extrabold */
+    color: #ca654c; /* text-blue-300 (your preferred color) */
+    margin-bottom: 0.5rem; /* Reduced margin-bottom */
+  }
 
-	@media (min-width: 640px) { /* sm breakpoint */
-		.thesis-title {
-		font-size: 1.4rem; /* sm:text-2xl */
-		}
-	}
-	@media (min-width: 1024px) { /* lg breakpoint */
-		.thesis-title {
-		font-size: 1.4rem; /* lg:text-3xl */
-		}
-	}
+  @media (min-width: 640px) { /* sm breakpoint */
+    .thesis-title {
+      font-size: 1.4rem; /* sm:text-2xl */
+    }
+  }
+  @media (min-width: 1024px) { /* lg breakpoint */
+    .thesis-title {
+      font-size: 1.4rem; /* lg:text-3xl */
+    }
+  }
 
-	.thesis-paragraph {
-		font-size: 1.rem; /* text-lg */
-	
-	}
+  .thesis-paragraph {
+    font-size: 1rem; /* text-lg */
+  }
 
-	.thesis-paragraph strong {
-		color: #ffffff; /* text-white */
-	}
+  .thesis-paragraph strong {
+    color: #ffffff; /* text-white */
+  }
 
-	/* Full-Width Bullet Points Section */
-	.thesis-full-width-bullets {
-		margin-top: 2rem; /* Space above this section */
-		width: 100%; /* Ensure it takes full width */
-	}
+  /* Full-Width Bullet Points Section */
+  .thesis-full-width-bullets {
+    margin-top: 2rem; /* Space above this section */
+    width: 100%; /* Ensure it takes full width */
+  }
 
-	.thesis-bullet-section {
-		display: flex;
-		flex-direction: column;
-		gap: 1rem; /* space-y-4 */
-		font-size: 1rem; /* text-base */
-	}
+  .thesis-bullet-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* space-y-4 */
+    font-size: 1rem; /* text-base */
+  }
 
-	.thesis-bullet-section p {
-		font-weight: 600; /* font-semibold */
-		color: #ffffff; /* text-white */
-		margin-bottom: 0.5rem; /* Added margin for spacing with list */
-	}
+  .thesis-bullet-section p {
+    font-weight: 600; /* font-semibold */
+    color: #ffffff; /* text-white */
+    margin-bottom: 0.5rem; /* Added margin for spacing with list */
+  }
 
-	.thesis-bullet-section ul {
-		list-style-type: disc; /* list-disc */
-		padding-left: 1rem; /* pl-4 */
-		margin-left: 1rem; /* For visual indentation */
-		list-style-position: inside; /* list-inside */
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem; /* space-y-2 */
-	}
+  .thesis-bullet-section ul {
+    list-style-type: disc; /* list-disc */
+    padding-left: 1rem; /* pl-4 */
+    margin-left: 1rem; /* For visual indentation */
+    list-style-position: inside; /* list-inside */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* space-y-2 */
+  }
 
-	.thesis-bullet-section ul strong {
-		color: #ca654c; /* text-blue-300 (your preferred color) */
-	}
+  .thesis-bullet-section ul strong {
+    color: #ca654c; /* text-blue-300 (your preferred color) */
+  }
 
-	.thesis-bullet-section ul ul {
-		list-style-type: circle; /* list-circle */
-		margin-left: 1rem; /* ml-4 */
-		gap: 0.25rem; /* space-y-1 */
-	}
+  .thesis-bullet-section ul ul {
+    list-style-type: circle; /* list-circle */
+    margin-left: 1rem; /* ml-4 */
+    gap: 0.25rem; /* space-y-1 */
+  }
 
-	/* Right Column: Image Gallery */
-	.thesis-gallery-column {
-		overflow-x: scroll; /* overflow-x-auto */
-		padding-bottom: 0; /* Removed padding-bottom as scrollbar is hidden */
-		scroll-snap-type: x mandatory; /* Enable scroll snapping */
-		display: flex; /* Ensure flexbox for image alignment */
-		align-items: center; /* Vertically center images */
-		height: 300px; /* Fixed height for consistent alignment */
-		/* Hide scrollbar for all browsers */
-		-ms-overflow-style: none;  /* IE and Edge */
-		scrollbar-width: none;  /* Firefox */
-	}
+  /* Right Column: Image Gallery (Outer container) */
+  .thesis-gallery-column {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack image flex and dots vertically */
+    height: 300px; /* Fixed height for the entire gallery area */
+    position: relative; /* Needed for sticky positioning of nav dots */
+    overflow: hidden; /* Hide any overflow on this container itself */
+  }
 
-	.thesis-gallery-column::-webkit-scrollbar {
-		display: none; /* Chrome, Safari, Opera */
-	}
+  /* The actual horizontally scrollable image container */
+  .thesis-image-flex {
+    display: flex;
+    gap: 1rem; /* space-x-4 */
+    padding: 0 20px; /* Padding for centering first/last images */
+    box-sizing: content-box; /* Ensure padding doesn't affect flex item sizing */
+    flex-grow: 1; /* Allow images to take up available height */
+    align-items: center; /* Vertically center images within their scrollable area */
+    overflow-x: auto; /* This is the actual scrolling part */
+    scroll-snap-type: x mandatory; /* Apply snap to this inner flex */
 
-	.thesis-image-flex {
-		display: flex;
-		gap: 1rem; /* space-x-4 */
-		/* Adjusted padding to be smaller for better mobile fit, still allows centering */
-		padding: 0 20px; /* Smaller fixed padding */
-		box-sizing: content-box; /* Ensure padding doesn't affect flex item sizing */
-		/* Removed min-width: max-content to prevent horizontal page overflow */
-	}
+    /* Hide scrollbar for this specific element */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
 
-	.thesis-image-wrapper {
-		flex-shrink: 0; /* flex-shrink-0 */
-		scroll-snap-align: center; /* Snap to center */
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		transition: transform 0.3s ease-out; /* Smooth transition for scaling */
-		position: relative; /* For caption positioning */
-	}
+  .thesis-image-flex::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
 
-	.thesis-image-wrapper img {
-		max-width: 100%; /* Ensure images don't overflow their wrapper */
-		max-height: 250px; /* Constrain image height within the gallery height */
-		height: auto;
-		border-radius: 0.5rem; /* rounded-lg */
-		/* Removed box-shadow and border from image */
-		object-fit: contain; /* Ensure entire image is visible without cropping */
-	}
+  .thesis-image-wrapper {
+    flex-shrink: 0; /* Prevent images from shrinking */
+    scroll-snap-align: center; /* Snap to center */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-out; /* Smooth transition for scaling */
+    position: relative; /* For caption positioning */
+  }
 
-	.thesis-image-caption {
-		position: absolute; /* Position caption relative to wrapper */
-		bottom: 0;
-		left: 0;
-		right: 0;
-		padding: 0.5rem; /* p-2 */
-		font-size: 0.75rem; /* text-xs */
-		text-align: center; /* text-center */
-		background-color: rgba(31, 41, 55, 0.8); /* bg-gray-800 with transparency */
-		color: #d1d5db; /* text-gray-300 */
-		border-bottom-left-radius: 0.5rem;
-		border-bottom-right-radius: 0.5rem;
-		opacity: 0; /* Hide by default */
-		transition: opacity 0.3s ease-out;
-	}
+  .thesis-image-wrapper img {
+    max-width: 100%; /* Ensure images don't overflow their wrapper */
+    max-height: 250px; /* Constrain image height within the gallery height */
+    height: auto;
+    border-radius: 0.5rem; /* rounded-lg */
+    object-fit: contain; /* Ensure entire image is visible without cropping */
+  }
 
-	.thesis-image-wrapper:hover .thesis-image-caption {
-		opacity: 1; /* Show on hover */
-	}
+  .thesis-image-caption {
+    position: absolute; /* Position caption relative to wrapper */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.5rem; /* p-2 */
+    font-size: 0.75rem; /* text-xs */
+    text-align: center; /* text-center */
+    background-color: rgba(31, 41, 55, 0.8); /* bg-gray-800 with transparency */
+    color: #d1d5db; /* text-gray-300 */
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    opacity: 0; /* Hide by default */
+    transition: opacity 0.3s ease-out;
+  }
 
-	/* Read Full Paper Text Link */
-	.thesis-read-more-link {
-		display: block; /* block to take full width for centering */
-		text-align: left; /* Align to left */
-		margin-top: 1.5rem; /* mt-6 */
-		font-size: 1rem; /* text-base */
-		color: #ca654c; /* text-blue-400 (your preferred color) */
-		text-decoration: underline; /* Underline for link */
-		transition: color 0.2s ease-in-out;
-	}
+  .thesis-image-wrapper:hover .thesis-image-caption {
+    opacity: 1; /* Show on hover */
+  }
 
-	.thesis-read-more-link:hover {
-		color: #d88a78; /* Lighter shade on hover, matching your scheme */
-	}
+  /* Read Full Paper Text Link */
+  .thesis-read-more-link {
+    display: block; /* block to take full width for centering */
+    text-align: left; /* Align to left */
+    margin-top: 1.5rem; /* mt-6 */
+    font-size: 1rem; /* text-base */
+    color: #ca654c; /* text-blue-400 (your preferred color) */
+    text-decoration: underline; /* Underline for link */
+    transition: color 0.2s ease-in-out;
+  }
 
-	@media (min-width: 768px) { /* md breakpoint */
-		.thesis-read-more-link {
-		text-align: left; /* Keep left aligned on larger screens */
-		}
-	}
-	</style>
+  .thesis-read-more-link:hover {
+    color: #d88a78; /* Lighter shade on hover, matching your scheme */
+  }
+
+  @media (min-width: 768px) { /* md breakpoint */
+    .thesis-read-more-link {
+      text-align: left; /* Keep left aligned on larger screens */
+    }
+  }
+
+  /* Gallery Navigation Dots */
+  .gallery-nav-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: auto; /* Push to bottom if flex-direction column */
+    padding: 0.5rem 0; /* Padding for sticky background */
+    gap: 0.3rem; /* Reduced space between dots */
+    width: 100%; /* Ensure it spans the width of the gallery column */
+    position: sticky; /* Make it sticky */
+    bottom: 0; /* Stick to the bottom */
+    z-index: 10; /* Ensure it stays on top of scrolling images */
+  }
+
+  .gallery-nav-dot {
+    width: 20px; /* Reduced diameter of the circle */
+    height: 20px; /* Reduced diameter of the circle */
+    border-radius: 50%; /* Make it circular */
+    background-color: #374151; /* Default background color */
+    color: #d1d5db; /* Text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7rem; /* Reduced text size */
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: 1px solid #4b5563; /* Subtle border */
+  }
+
+  .gallery-nav-dot:hover {
+    background-color: #4b5563; /* Darker on hover */
+    transform: scale(1.1);
+  }
+
+  .gallery-nav-dot.active {
+    background-color: #ca654c; /* Active color */
+    color: #ffffff; /* Active text color */
+    border-color: #ca654c;
+    transform: scale(1.05);
+  }
+</style>
 
 	<!-- end for research experience -->
 
@@ -539,8 +583,9 @@
 
 				<!-- MSc Thesis Project Section Container -->
 				<section class="thesis-section-container">
-				<div class="col-md-12">
-					<h2 class="mb-5">Research Experience</h2>
+				<div class="section-heading">
+					<h2 class="text-white">Research <strong>Experience</strong></h2>
+					<p class="text-gray-300 mt-2">A deep dive into advanced materials simulation and analysis.</p>
 				</div>
 
 				<div class="thesis-content-flex">
@@ -564,8 +609,8 @@
 					</div>
 
 					<!-- Right Column: Image Gallery (Horizontally Scrollable) -->
-					<div class="thesis-gallery-column" id="imageGallery">
-					<div class="thesis-image-flex">
+					<div class="thesis-gallery-column" id="imageGalleryContainer">
+					<div class="thesis-image-flex" id="imageGallery">
 						<!-- Image 1 -->
 						<div class="thesis-image-wrapper">
 						<img src="images/research_experience/image1.png" alt="Thesis Image 1: Initial Configuration" onerror="this.onerror=null;this.src='https://placehold.co/600x400/333333/FFFFFF?text=Image%201';">
@@ -592,6 +637,11 @@
 						<p class="thesis-image-caption">Final state of synthesized nanoparticles</p>
 						</div>
 						<!-- Add more image divs here following the same structure if needed (up to 8) -->
+					</div>
+
+					<!-- Gallery Navigation Dots (Now sticky at the bottom of the gallery column) -->
+					<div class="gallery-nav-dots" id="galleryNavDots">
+						<!-- Dots will be dynamically generated here by JavaScript -->
 					</div>
 					</div>
 				</div>
@@ -629,7 +679,6 @@
 					</div>
 				</div>
 				</section>
-
 
 
 
@@ -821,43 +870,112 @@
 
 
 
-	<!-- script for research experience -->
-	<script>
-	document.addEventListener('DOMContentLoaded', () => {
-		const gallery = document.getElementById('imageGallery');
-		const imageWrappers = gallery.querySelectorAll('.thesis-image-wrapper');
+		<!-- script for research experience -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Renamed gallery to imageGalleryScrollArea to reflect its new role as the scrollable part
+    const imageGalleryScrollArea = document.getElementById('imageGallery');
+    const imageWrappers = imageGalleryScrollArea.querySelectorAll('.thesis-image-wrapper');
+    const galleryNavDotsContainer = document.getElementById('galleryNavDots');
 
-		const updateImageScale = () => {
-		const galleryRect = gallery.getBoundingClientRect();
-		const galleryCenterX = galleryRect.left + galleryRect.width / 2;
+    // Function to update the scale of images based on their proximity to the center
+    const updateImageScale = () => {
+      const galleryRect = imageGalleryScrollArea.getBoundingClientRect();
+      const galleryCenterX = galleryRect.left + galleryRect.width / 2;
 
-		imageWrappers.forEach(wrapper => {
-			const imageRect = wrapper.getBoundingClientRect();
-			const imageCenterX = imageRect.left + imageRect.width / 2;
+      imageWrappers.forEach(wrapper => {
+        const imageRect = wrapper.getBoundingClientRect();
+        const imageCenterX = imageRect.left + imageRect.width / 2;
 
-			// Calculate distance from the center of the gallery
-			const distance = Math.abs(galleryCenterX - imageCenterX);
+        const distance = Math.abs(galleryCenterX - imageCenterX);
+        const maxDistance = galleryRect.width / 2; // Scale based on distance from center to edge
+        const normalizedDistance = Math.min(1, distance / maxDistance);
 
-			// Normalize distance to a 0-1 range, where 0 is center, 1 is edge
-			// Max distance is half the gallery width plus half an image width (approx)
-			// Using galleryRect.width / 2 as a base for maxDistance to ensure scaling over the visible area
-			const maxDistance = galleryRect.width / 2;
-			const normalizedDistance = Math.min(1, distance / maxDistance);
+        const scale = 1 - (normalizedDistance * 0.3); // Adjust 0.3 for desired min scale (e.g., 0.3 means scales down to 70%)
+        wrapper.style.transform = `scale(${scale})`;
+      });
+    };
 
-			// Scale factor: closer to 1 at center, smaller towards edges
-			const scale = 1 - (normalizedDistance * 0.3); // Adjust 0.3 for desired min scale (e.g., 0.3 means scales down to 70%)
+    // Function to update the active navigation dot
+    const updateActiveDot = () => {
+      const galleryRect = imageGalleryScrollArea.getBoundingClientRect();
+      const galleryCenter = galleryRect.left + galleryRect.width / 2;
+      let closestImageIndex = 0;
+      let minDistance = Infinity;
 
-			wrapper.style.transform = `scale(${scale})`;
-		});
-		};
+      imageWrappers.forEach((wrapper, index) => {
+        const imgRect = wrapper.getBoundingClientRect();
+        const imgCenter = imgRect.left + imgRect.width / 2;
+        const distance = Math.abs(galleryCenter - imgCenter);
 
-		// Initial update and update on scroll
-		updateImageScale();
-		gallery.addEventListener('scroll', updateImageScale);
-		window.addEventListener('resize', updateImageScale); // Recalculate on resize
-	});
-	</script>
-	<!-- script for research experience -->
+        if (distance < minDistance) {
+          minDistance = distance;
+          closestImageIndex = index;
+        }
+      });
+
+      // Remove active class from all dots
+      galleryNavDotsContainer.querySelectorAll('.gallery-nav-dot').forEach(dot => {
+        dot.classList.remove('active');
+      });
+
+      // Add active class to the closest image's dot
+      if (galleryNavDotsContainer.children[closestImageIndex]) {
+        galleryNavDotsContainer.children[closestImageIndex].classList.add('active');
+      }
+    };
+
+    // Create navigation dots dynamically
+    galleryNavDotsContainer.innerHTML = ''; // Clear existing dots before re-creating
+    imageWrappers.forEach((_, index) => {
+      const dot = document.createElement('div');
+      dot.classList.add('gallery-nav-dot');
+      dot.textContent = index + 1;
+      dot.addEventListener('click', () => {
+        // Scroll the corresponding image into view
+        // Using scrollIntoView with 'center' alignment for smooth centering
+        imageWrappers[index].scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
+      });
+      galleryNavDotsContainer.appendChild(dot);
+    });
+
+    // Event listeners
+    imageGalleryScrollArea.addEventListener('scroll', () => {
+      updateImageScale();
+      updateActiveDot();
+    });
+    window.addEventListener('resize', () => {
+      updateImageScale();
+      updateActiveDot();
+    });
+
+    // Initial calls
+    updateImageScale();
+    updateActiveDot(); // Set initial active dot
+  });
+</script>
+
+		<!-- script for research experience -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
