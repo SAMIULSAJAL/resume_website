@@ -413,7 +413,66 @@
 		<!-- end for additional projects -->
 
 
+    <!-- CSS for Technical Training Section Icons -->
+    <style>
+        /* New styles for course icons positioned top-right */
+        .resume-item.card-style {
+            position: relative; /* Ensure positioning context for absolute icons */
+            padding-top: 2.5rem; /* Add padding to make space for icons at the top */
+        }
 
+        .course-icons-top-right {
+            position: absolute;
+            top: 15px; /* Distance from the top edge */
+            right: 15px; /* Distance from the right edge */
+            display: flex;
+            flex-wrap: wrap; /* Allow icons to wrap if many */
+            gap: 8px; /* Smaller space between icons */
+            justify-content: flex-end; /* Align icons to the right within their container */
+        }
+
+        .course-icons-top-right i {
+            color: #ff8c00; /* Orange color for icons */
+            font-size: 1.2em; /* Smaller icon size */
+        }
+
+        /* Ensure existing resume-item styling applies to these cards */
+        .resume-item.card-style {
+            /* These styles are already defined in your main CSS for card-style */
+            /* background-color: #2c2c2c; */
+            /* border-radius: 8px; */
+            /* padding: 1.5rem; */
+            /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+            /* transition: transform 0.3s ease; */
+            /* height: 100%; */
+            /* display: flex; */
+            /* flex-direction: column; */
+            /* justify-content: space-between; */
+        }
+
+        .resume-item.card-style h3 {
+            /* color: #ff8c00; */
+            /* font-size: 1.25rem; */
+            /* margin-bottom: 0.5rem; */
+        }
+
+        .resume-item.card-style .date {
+            /* color: #b0b0b0; */
+            /* font-size: 0.95rem; */
+        }
+
+        /* Ensure bullet points are visible again */
+        .resume-item.card-style ul {
+            list-style-type: disc; /* Re-enable disc bullets */
+            padding-left: 20px; /* Standard padding for lists */
+            margin-top: 10px; /* Space between title/date and list */
+            color: #b0b0b0; /* Inherit text color for list items */
+        }
+
+        .resume-item.card-style ul li {
+            margin-bottom: 5px; /* Small space between list items */
+        }
+    </style>
 
 
 
@@ -833,62 +892,86 @@
 
 
 	
-				<!-- Online Courses Section -->
-				<div class="col-md-12 mt-5">
-					<h2 class="mb-5">Technical Trianing</h2>
-				</div>
-	
-				<div class="col-md-6">
-					<div class="resume-item mb-4">
-						<span class="date"><span class="icon-calendar"></span> Completed</span>
-						<h3>Google Data Analytics Professional Certificate</h3>
-						<ul>
-							<li>Data cleaning, visualization, and analysis using SQL, R, and Tableau.</li>
-							<li>Practical case studies applying statistical methods in business analytics.</li>
-							<li>Building interactive dashboards and automated reports.</li>
-						</ul>
-					</div>
-	
-					<div class="resume-item mb-4">
-						<span class="date"><span class="icon-calendar"></span> Completed</span>
-						<h3>Python for Everybody</h3>
-						<ul>
-							<li>Python programming fundamentals: variables, loops, and data structures.</li>
-							<li>Accessing web data using APIs and JSON.</li>
-							<li>Using databases with Python (SQLite and SQL queries).</li>
-						</ul>
-					</div>
-				</div>
-	
-				<div class="col-md-6">
-					<div class="resume-item mb-4">
-						<span class="date"><span class="icon-calendar"></span> Completed</span>
-						<h3>Every Number Tells a Story</h3>
-						<ul>
-							<li>Data analysis using R for statistical insights.</li>
-							<li>Fundamentals of regression analysis and probability distributions.</li>
-							<li>Hands-on experience with real-world datasets.</li>
-						</ul>
-					</div>
-	
-					<div class="resume-item mb-4">
-						<span class="date"><span class="icon-calendar"></span> Completed</span>
-						<h3>Scientific Programming in Python</h3>
-						<ul>
-							<li>Scientific computing with NumPy, SciPy, and Matplotlib.</li>
-							<li>Solving physics-based problems using computational techniques.</li>
-						</ul>
-					</div>
-	
-					<div class="resume-item mb-4">
-						<span class="date"><span class="icon-calendar"></span> Completed</span>
-						<h3>Intensive Julia Programming Workshop</h3>
-						<ul>
-							<li>Introduction to Julia for high-performance scientific computing.</li>
-							<li>Working with data frames and visualization in Julia.</li>
-						</ul>
-					</div>
-				</div>
+                <!-- Technical Training Section (formerly Online Courses) -->
+                <div class="col-md-12 mt-5">
+                    <h2 class="mb-5">Technical Training</h2>
+                </div>
+    
+                <div class="col-md-6">
+                    <div class="resume-item mb-4 card-style">
+                        <div class="course-icons-top-right"> <!-- New div for top-right icons -->
+                            <i class="fa-brands fa-google" title="Google Data Analytics"></i>
+                            <i class="fa-solid fa-database" title="SQL"></i>
+                            <i class="fa-brands fa-r-project" title="R Programming"></i>
+                            <i class="fa-solid fa-chart-bar" title="Tableau / Data Visualization"></i>
+                        </div>
+                        <span class="date"><span class="icon-calendar"></span> Completed</span>
+                        <h3>Google Data Analytics Professional Certificate</h3>
+                        <ul>
+                            <li>Data cleaning, visualization, and analysis using SQL, R, and Tableau.</li>
+                            <li>Practical case studies applying statistical methods in business analytics.</li>
+                            <li>Building interactive dashboards and automated reports.</li>
+                        </ul>
+                    </div>
+    
+                    <div class="resume-item mb-4 card-style">
+                        <div class="course-icons-top-right">
+                            <i class="fa-brands fa-python" title="Python Programming"></i>
+                            <i class="fa-solid fa-database" title="Databases (SQLite)"></i>
+                        </div>
+                        <span class="date"><span class="icon-calendar"></span> Completed</span>
+                        <h3>Python for Everybody</h3>
+                        <ul>
+                            <li>Python programming fundamentals: variables, loops, and data structures.</li>
+                            <li>Accessing web data using APIs and JSON.</li>
+                            <li>Using databases with Python (SQLite and SQL queries).</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="col-md-6">
+                    <div class="resume-item mb-4 card-style">
+                        <div class="course-icons-top-right">
+                            <i class="fa-brands fa-r-project" title="R Programming"></i>
+                            <i class="fa-solid fa-chart-line" title="Statistical Analysis"></i>
+                        </div>
+                        <span class="date"><span class="icon-calendar"></span> Completed</span>
+                        <h3>Every Number Tells a Story</h3>
+                        <ul>
+                            <li>Data analysis using R for statistical insights.</li>
+                            <li>Fundamentals of regression analysis and probability distributions.</li>
+                            <li>Hands-on experience with real-world datasets.</li>
+                        </ul>
+                    </div>
+    
+                    <div class="resume-item mb-4 card-style">
+                        <div class="course-icons-top-right">
+                            <i class="fa-brands fa-python" title="Python Programming"></i>
+                            <i class="fa-solid fa-calculator" title="Scientific Computing (NumPy, SciPy)"></i>
+                            <i class="fa-solid fa-chart-area" title="Data Visualization (Matplotlib)"></i>
+                        </div>
+                        <span class="date"><span class="icon-calendar"></span> Completed</span>
+                        <h3>Scientific Programming in Python</h3>
+                        <ul>
+                            <li>Scientific computing with NumPy, SciPy, and Matplotlib.</li>
+                            <li>Solving physics-based problems using computational techniques.</li>
+                        </ul>
+                    </div>
+    
+                    <div class="resume-item mb-4 card-style">
+                        <div class="course-icons-top-right">
+                            <i class="fa-solid fa-code" title="Julia Programming"></i> <!-- Using generic code icon for Julia -->
+                        </div>
+                        <span class="date"><span class="icon-calendar"></span> Completed</span>
+                        <h3>Intensive Julia Programming Workshop</h3>
+                        <ul>
+                            <li>Introduction to Julia for high-performance scientific computing.</li>
+                            <li>Working with data frames and visualization in Julia.</li>
+                        </ul>
+                    </div>
+                </div>
+
+
 
 
 
