@@ -535,188 +535,101 @@
 
 <!-- ---------------------- portfolio--------------------- -->	
 
-	<section class="site-section" id="section-portfolio">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 mb-5">
-					<div class="section-heading text-center">
-						<h2>Portfolio <strong>Projects</strong></h2>
-					</div>
-				</div>
-			</div>
+
+    <section class="site-section" id="section-portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 mb-5">
+                    <div class="section-heading text-center">
+                        <h2>Portfolio <strong>Projects</strong></h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center"> <!-- Centralize all project cards -->
+
+                <!-- Project Card: Three-Body Simulation in Julia (Reformatted) -->
+                <div class="col-md-6 col-lg-4 mb-4"> <!-- Changed to col-lg-4 for 3-column layout -->
+                    <a href="project_3_body_problem.html" style="text-decoration: none; color: inherit;" class="project-card-link">
+                        <div class="project-card card-style">
+                            <div class="project-media-container">
+                                <img src="images/portfolio/moons_orbits.gif" alt="Three Body Simulation Thumbnail" class="img-fluid project-image">
+                            </div>
+                            <h3>Three-Body Problem: Saturn, Janus & Epimetheus</h3>
+                            <p>Simulated the complex orbital dynamics of Saturn, Janus, and Epimetheus using Julia, applying numerical integration methods to visualize their gravitational interactions and co-orbital behavior.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Project Card 1: European Social Survey (ESS) Analysis (Original Additional Project) -->
+                <div class="col-md-6 col-lg-4 mb-4"> <!-- Changed to col-lg-4 for 3-column layout -->
+                    <a href="https://github.com/SAMIULSAJAL/internet-and-news-consumption" target="_blank" class="project-card-link" data-project-id="ess">
+                        <div class="project-card card-style">
+                            <div class="project-media-container">
+                                <img src="images/portfolio/additional_projects/project_ESS/image1.png" alt="European Social Survey Analysis" class="img-fluid project-image">
+                            </div>
+                            <h3>European Social Survey (ESS) Analysis</h3>
+                            <p>Explored the correlation between internet/news consumption and climate opinion using univariate and bivariate statistics. Analyzed age-internet use relationships.</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- Project Card 2: The Incredible Machine (Original Additional Project) -->
+                <div class="col-md-6 col-lg-4 mb-4"> <!-- Changed to col-lg-4 for 3-column layout -->
+                    <a href="https://github.com/SAMIULSAJAL/The_incredible_machine" target="_blank" class="project-card-link" data-project-id="incredible-machine">
+                        <div class="project-card card-style">
+                            <div class="project-media-container">
+                                <img src="images/portfolio/additional_projects/project_incredible_machine/incredible_machine.gif" alt="The Incredible Machine Simulation" class="img-fluid project-image">
+                            </div>
+                            <h3>The Incredible Machine (Python)</h3>
+                            <p>A Python simulation inspired by the classic game, modeling particles moving under forces like gravity and interacting with walls. Features modular classes for customizable setups and real-time animation.</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- Project Card 3: Arctic Ice Map Analysis (Original Additional Project) -->
+                <div class="col-md-6 col-lg-4 mb-4"> <!-- Changed to col-lg-4 for 3-column layout -->
+                    <a href="https://github.com/SAMIULSAJAL/arctic_ice_map" target="_blank" class="project-card-link" data-project-id="arctic-ice-map">
+                        <div class="project-card card-style">
+                            <div class="project-media-container">
+                                <img src="images/portfolio/additional_projects/project_ice_map/image1.png" alt="Arctic Ice Map Analysis" class="img-fluid project-image">
+                            </div>
+                            <h3>Arctic Ice Map Analysis</h3>
+                            <p>Analyzed 20 years of satellite data to visualize the progressive loss of Arctic ice concentration, highlighting environmental changes.</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- Project Card 4: Lab Experiments Data Analysis (Original Additional Project) -->
+                <div class="col-md-6 col-lg-4 mb-4"> <!-- Changed to col-lg-4 for 3-column layout -->
+                    <a href="https://github.com/SAMIULSAJAL/your-lab-report-repo" target="_blank" class="project-card-link" data-project-id="lab-report">
+                        <div class="project-card card-style">
+                            <div class="project-media-container">
+                                <img src="images/portfolio/additional_projects/project_lab_report/image5.jpg" alt="Lab Experiments Data Analysis" class="img-fluid project-image">
+                            </div>
+                            <h3>Lab Experiments Data Analysis</h3>
+                            <p>Conducted in-depth analysis of experimental data from physics lab reports, applying statistical methods and creating visualizations to interpret results and draw conclusions.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Project Card: Business Automation with Google Sheets & MS Excel (Reformatted and moved to last) -->
+                <div class="col-md-6 col-lg-4 mb-4"> <!-- Changed to col-lg-4 for 3-column layout -->
+                    <a href="project_google_sheet_business_analysis.html" style="text-decoration: none; color: inherit;" class="project-card-link">
+                        <div class="project-card card-style">
+                            <div class="project-media-container">
+                                <img src="images/business-automation-thumbnail.png" alt="Google Sheets & Excel Project" class="img-fluid project-image">
+                            </div>
+                            <h3>Business Automation with Google Sheets & MS Excel</h3>
+                            <p>Developed an automated system for sales, purchases, salary, and attendance tracking for a family business, including dynamic dashboards and inventory management.</p>
+                        </div>
+                    </a>
+                </div>
+
+            </div> <!-- End of row justify-content-center -->
+
+        </div>
+    </section>
 
 
 
-
-			<!-- Project 2: Three-Body Simulation in Julia -->
-			<a href="project_3_body_problem.html" style="text-decoration: none; color: inherit;">
-				<div class="row portfolio-entry mb-5" style="cursor:pointer; transition: transform 0.3s ease; box-shadow: 0 0 10px rgba(0,0,0,0.5); border-radius: 8px;" 
-					onmouseover="this.style.transform='translate(5px,5px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.8)';" 
-					onmouseout="this.style.transform='translate(0,0)'; this.style.boxShadow='0 0 10px rgba(0,0,0,0.5)';">
-
-					<!-- Left side with GIF thumbnail -->
-					<div class="col-md-5 d-flex flex-column" style=" border-radius: 8px 0 0 8px; padding: 20px; color: white;">
-						<img src="images/portfolio/moons_orbits.gif" alt="Three Body Simulation Thumbnail" class="img-fluid mb-3" style="border-radius: 6px;">
-						<h4 style="color: #ca654c;">Three-Body Problem: Saturn, Janus & Epimetheus</h4>
-						<div class="mt-auto">
-							<img src="images/portfolio/julia_icon.png" alt="Julia Language" title="Julia Programming Language" style="height:30px; margin-right: 10px;">
-							
-						</div>
-					</div>
-
-					<!-- Right side with quick skill summary -->
-					<div class="col-md-7" style="border-radius: 0 8px 8px 0; padding: 30px; color: rgb(132, 129, 129);">
-						<div class="row">
-							<div class="col-md-6">
-								<h5>Technical Skills</h5>
-								<ul style="columns: 1; padding-left: 20px;">
-									<li>Julia Programming</li>
-									<li>Runge-Kutta 4th Order Method</li>
-									<li>Numerical Integration</li>
-									<li>Differential Equations</li>
-									<li>Orbital Dynamics</li>
-									<li>Data Visualization</li>
-								</ul>
-							</div>
-							<div class="col-md-6">
-								<h5>Analytical Skills</h5>
-								<ul style="columns: 1; padding-left: 20px;">
-									<li>Scientific Reasoning</li>
-									<li>Physics Interpretation</li>
-									<li>Critical Thinking</li>
-									<li>Research-Oriented Approach</li>
-									<li>Simulation Design</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>		
-			</a>
-		
-
-
-
-
-
-			<!-- Project 1: Google Sheets & Excel Business Project -->
-			<a href="project_google_sheet_business_analysis.html" style="text-decoration: none; color: inherit;">
-				<div class="row portfolio-entry mb-5" style="cursor:pointer; transition: transform 0.3s ease; box-shadow: 0 0 10px rgba(0,0,0,0.5); border-radius: 8px;" 
-					onmouseover="this.style.transform='translate(5px,5px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.8)';" 
-					onmouseout="this.style.transform='translate(0,0)'; this.style.boxShadow='0 0 10px rgba(0,0,0,0.5)';">
-
-					<!-- Left side -->
-					<div class="col-md-5 d-flex flex-column" style="border-radius: 8px 0 0 8px; padding: 20px; color: #d21a1a;">
-						<img src="images/business-automation-thumbnail.png" alt="Google Sheets & Excel Project" class="img-fluid mb-3" style="border-radius: 6px;">
-						<h3 style="color: #ca654c;">Business Automation with Google Sheets & MS Excel </h3>
-						<div class="mt-auto">
-							<img src="icons/google_sheet.png" alt="Google Sheets" title="Google Sheets" style="height:30px; margin-right: 10px;">
-							<img src="icons/google_Apps_Script.svg" alt="MS Excel" title="Microsoft Excel" style="height:30px;">
-							<img src="icons/ms_excel.png" alt="Google Sheets" title="Google Sheets" style="height:30px; margin-right: 10px;">
-						</div>
-					</div>
-
-					<!-- Right side -->
-					<div class="col-md-7" style=" border-radius: 0 8px 8px 0; padding: 30px; color: rgb(132, 129, 129);">
-						<div class="row">
-							<div class="col-md-6">
-								<h5>Spreadsheet Skills</h5>
-								<ul style="columns: 1; padding-left: 20px;">
-									<li>Power Query</li>
-									<li>Macros</li>
-									<li>Google Apps Script</li>
-									<li>Data Cleaning & Preparation</li>
-									<li>Formulas & Functions (VLOOKUP, XLOOKUP, INDEX-MATCH, SUMIFS, COUNTIFS, IF, AND, OR)</li>
-									<li>Data Validation</li>
-									<li>Pivot Tables</li>
-									<li>Data Sorting & Filtering</li>
-									<li>Conditional Formatting</li>
-									<li>Chart & Graph Creation</li>
-									<li>Data Visualization</li>
-									<li>Error Handling (IFERROR)</li>
-								</ul>
-							</div>
-							<div class="col-md-6">
-								<h5>Analytical & Soft Skills</h5>
-								<ul style="columns: 1; padding-left: 20px;">
-									<li>Problem-Solving</li>
-									<li>Critical Thinking</li>
-									<li>Data Interpretation</li>
-									<li>Attention to Detail</li>
-									<li>Communication Skills</li>
-									<li>Business Acumen</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</a>
-
-		</div>		
-
-
-
-    <!-- ---------------------- Additional Projects Section --------------------- -->
-		<div class="additional-projects-container">
-			<h2 class="mb-5 section-heading text-center">Additional <strong>Projects</strong></h2>
-			<div class="row justify-content-center"> <!-- Added justify-content-center for horizontal centering -->
-				<!-- Project Card 1: European Social Survey (ESS) Analysis -->
-				<div class="col-md-6 col-lg-5 mb-4"> <!-- Adjusted to col-lg-5 for slightly smaller boxes -->
-					<a href="https://github.com/SAMIULSAJAL/internet-and-news-consumption" target="_blank" class="project-card-link" data-project-id="ess">
-						<div class="project-card card-style">
-							<div class="project-media-container">
-								<img src="images/portfolio/additional_projects/project_ESS/image1.png" alt="European Social Survey Analysis" class="img-fluid project-image">
-							</div>
-							<h3>European Social Survey (ESS) Analysis</h3>
-							<p>Explored the correlation between internet/news consumption and climate opinion using univariate and bivariate statistics. Analyzed age-internet use relationships.</p>
-						</div>
-					</a>
-				</div>
-				<!-- Project Card 2: The Incredible Machine -->
-				<div class="col-md-6 col-lg-5 mb-4"> <!-- Adjusted to col-lg-5 for slightly smaller boxes -->
-					<a href="https://github.com/SAMIULSAJAL/The_incredible_machine" target="_blank" class="project-card-link" data-project-id="incredible-machine">
-						<div class="project-card card-style">
-							<div class="project-media-container">
-								<!-- Changed to img tag for GIF -->
-								<img src="images/portfolio/additional_projects/project_incredible_machine/incredible_machine.gif" alt="The Incredible Machine Simulation" class="img-fluid project-image">
-							</div>
-							<h3>The Incredible Machine (Python)</h3>
-							<p>A Python simulation inspired by the classic game, modeling particles moving under forces like gravity and interacting with walls. Features modular classes for customizable setups and real-time animation.</p>
-						</div>
-					</a>
-				</div>
-				<!-- Project Card 3: Arctic Ice Map Analysis -->
-				<div class="col-md-6 col-lg-5 mb-4"> <!-- Adjusted to col-lg-5 for slightly smaller boxes -->
-					<a href="https://github.com/SAMIULSAJAL/arctic_ice_map" target="_blank" class="project-card-link" data-project-id="arctic-ice-map">
-						<div class="project-card card-style">
-							<div class="project-media-container">
-								<img src="images/portfolio/additional_projects/project_ice_map/image1.png" alt="Arctic Ice Map Analysis" class="img-fluid project-image">
-							</div>
-							<h3>Arctic Ice Map Analysis</h3>
-							<p>Analyzed 20 years of satellite data to visualize the progressive loss of Arctic ice concentration, highlighting environmental changes.</p>
-						</div>
-					</a>
-				</div>
-				<!-- Project Card 4: Lab Experiments Data Analysis (Replaces Moon Dance) -->
-				<div class="col-md-6 col-lg-5 mb-4"> <!-- Adjusted to col-lg-5 for slightly smaller boxes -->
-					<a href="https://github.com/SAMIULSAJAL/your-lab-report-repo" target="_blank" class="project-card-link" data-project-id="lab-report">
-						<div class="project-card card-style">
-							<div class="project-media-container">
-								<img src="images/portfolio/additional_projects/project_lab_report/image5.jpg" alt="Lab Experiments Data Analysis" class="img-fluid project-image">
-							</div>
-							<h3>Lab Experiments Data Analysis</h3>
-							<p>Conducted in-depth analysis of experimental data from physics lab reports, applying statistical methods and creating visualizations to interpret results and draw conclusions.</p>
-						</div>
-					</a>
-				</div>
-			</div>
-		</div>
-	</section>	
-
-    <!-- CSS for Improved Additional Projects Section -->
-
-
-
-	</section>
 
 
 
