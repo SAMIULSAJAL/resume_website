@@ -476,6 +476,178 @@
 
 
 
+    <!-- marged portfolio projects -->
+    <style>
+        /* Style for the Portfolio Projects section heading */
+        .section-heading h2 {
+            font-size: 2.5rem; /* Example: adjust as per your template's h2 */
+            font-weight: bold;
+            color: #f8f8f8; /* Changed for dark background */
+        }
+        .section-heading strong {
+            color: #ff8c00; /* Orange color for emphasis, matching image */
+        }
+        .section-heading p {
+            font-size: 1rem;
+            color: #b0b0b0; /* Changed for dark background */
+        }
+
+        /* Adjust padding for the portfolio section container */
+        #section-portfolio .container {
+            /* Let Bootstrap's default .container styles apply */
+        }
+
+        #section-portfolio .row {
+            /* Let Bootstrap's default .row styles apply */
+            display: flex; /* Ensure flexbox for Bootstrap's column behavior */
+            flex-wrap: wrap; /* Allow wrapping */
+        }
+
+        /* New class for column spacing */
+        .project-col-spacing {
+            margin-bottom: 2.5rem; /* Increased space between rows */
+        }
+
+        #section-portfolio .col-md-6,
+        #section-portfolio .col-lg-4 {
+            /* Let Bootstrap's default column padding apply */
+        }
+
+        /* Styling for the project cards */
+        .project-card-link {
+            text-decoration: none; /* Remove underline from links */
+            color: inherit; /* Inherit text color */
+            display: block; /* Make the whole card clickable */
+            height: 100%; /* Ensure cards in a row have same height */
+        }
+
+        .project-card {
+            background-color: #2c2c2c; /* Darker background for cards */
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            min-height: 400px; /* Changed to min-height to allow content to expand */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Align content to the top */
+            overflow: visible; /* Ensure content outside padding is visible */
+            position: relative; /* For absolute positioning of icons */
+            padding-top: 2.5rem; /* Added padding to make space for icons at the top */
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .project-media-container {
+            width: 100%;
+            height: 200px; /* Fixed height for media container */
+            margin-bottom: 1rem; /* Space below media */
+            border-radius: 6px; /* Match parent card border-radius */
+            overflow: hidden; /* Clip content within this container */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #1a1a1a; /* Dark background for media area */
+        }
+
+        .project-image, .project-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Cover the area, cropping if necessary */
+            border-radius: 6px; /* Match container border-radius */
+            display: block;
+        }
+
+        .project-video {
+            object-fit: contain; /* Use contain for videos to prevent cropping issues */
+        }
+
+        .project-card h3 {
+            color: #ff8c00; /* Orange for titles */
+            font-size: 1.25rem; /* Larger title */
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: flex-start; /* Align text vertically at the top */
+            min-height: 3em; /* Ensure consistent height for titles (approx 2 lines) */
+        }
+
+        .project-card p { /* This paragraph will be hidden */
+            display: none;
+        }
+
+        /* Styles for rectangular icons (reverted and adjusted) */
+        .project-icons-rect { /* Changed class name to -rect */
+            position: absolute;
+            top: -25px; /* Half of its height (50px) outside the top */
+            right: 15px; /* Positioned to the right */
+            display: flex;
+            gap: 8px; /* Space between icons */
+            background-color: #2c2c2c; /* Darker background for the rectangular container */
+            border-radius: 8px; /* Rounded corners for the rectangle */
+            padding: 8px 15px; /* Padding inside the rectangle */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            z-index: 10; /* Ensure it's above other content */
+            opacity: 1; /* Always visible */
+        }
+
+        .project-icons-rect i {
+            color: #FFD700; /* Yellowish color for icons */
+            font-size: 1.5em; /* Adjusted size back to 1.5em */
+        }
+
+        .project-icons-rect img {
+            height: 1.5em; /* Match font-awesome size */
+            width: auto;
+            /* Removed filter to allow original colors to show for clarity */
+        }
+
+        /* New styles for keyword boxes */
+        .project-keywords-container {
+            display: flex;
+            flex-wrap: wrap; /* Allow keywords to wrap */
+            gap: 8px; /* Space between keyword boxes */
+            margin-top: 1rem; /* Space above keywords */
+            flex-grow: 1; /* Allow to take available space */
+            /* Removed overflow-y: auto; and padding-right: 5px; */
+            /* Removed fixed height to allow content to dictate height */
+        }
+
+        .keyword-box {
+            background-color: #3a3a3a; /* Darker background for keyword boxes */
+            color: #b0b0b0; /* Changed to description font color */
+            border-radius: 5px; /* Rounded corners for boxes */
+            padding: 5px 10px;
+            font-size: 0.85rem;
+            white-space: nowrap; /* Prevent keywords from breaking */
+        }
+
+
+        /* Responsive adjustments for the grid */
+        @media (max-width: 767.98px) { /* For small devices (xs and sm) */
+            .col-md-6 { /* This targets the projects to be full width on mobile */
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 991.98px) { /* For medium devices (md) */
+            .col-md-6 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+
+        @media (min-width: 992px) { /* For large devices (lg) and up */
+            .col-lg-4 { /* Adjusted to col-lg-4 for 3-column layout */
+                flex: 0 0 33.333333%;
+                max-width: 33.333333%;
+            }
+        }
+    </style>
+    <!-- marged portfolio projects -->
 
 
 
@@ -535,7 +707,6 @@
 
 <!-- ---------------------- portfolio--------------------- -->	
 
-
     <section class="site-section" id="section-portfolio">
         <div class="container">
             <div class="row">
@@ -549,76 +720,149 @@
             <div class="row justify-content-center"> <!-- Centralize all project cards -->
 
                 <!-- Project Card: Three-Body Simulation in Julia (Reformatted) -->
-                <div class="col-md-6 col-lg-4 mb-4"> <!-- Changed to col-lg-4 for 3-column layout -->
+                <div class="col-md-6 col-lg-4 project-col-spacing"> <!-- Added project-col-spacing for row spacing -->
                     <a href="project_3_body_problem.html" style="text-decoration: none; color: inherit;" class="project-card-link">
                         <div class="project-card card-style">
+                            <!-- Icons are now directly inside project-card for positioning -->
+                            <div class="project-icons-rect"> <!-- Changed class to rect -->
+                                <img src="images/portfolio/julia_icon.png" alt="Julia Icon" title="Julia Programming">
+                            </div>
                             <div class="project-media-container">
                                 <img src="images/portfolio/moons_orbits.gif" alt="Three Body Simulation Thumbnail" class="img-fluid project-image">
                             </div>
                             <h3>Three-Body Problem: Saturn, Janus & Epimetheus</h3>
-                            <p>Simulated the complex orbital dynamics of Saturn, Janus, and Epimetheus using Julia, applying numerical integration methods to visualize their gravitational interactions and co-orbital behavior.</p>
+                            <div class="project-keywords-container">
+                                <span class="keyword-box">Julia</span>
+                                <span class="keyword-box">Numerical Integration</span>
+                                <span class="keyword-box">Orbital Dynamics</span>
+                                <span class="keyword-box">Runge-Kutta</span>
+                                <span class="keyword-box">Simulation</span>
+                                <span class="keyword-box">Physics</span>
+                            </div>
                         </div>
                     </a>
                 </div>
 
                 <!-- Project Card 1: European Social Survey (ESS) Analysis (Original Additional Project) -->
-                <div class="col-md-6 col-lg-4 mb-4"> <!-- Changed to col-lg-4 for 3-column layout -->
+                <div class="col-md-6 col-lg-4 project-col-spacing"> <!-- Added project-col-spacing for row spacing -->
                     <a href="https://github.com/SAMIULSAJAL/internet-and-news-consumption" target="_blank" class="project-card-link" data-project-id="ess">
                         <div class="project-card card-style">
+                            <!-- Icons are now directly inside project-card for positioning -->
+                            <div class="project-icons-rect"> <!-- Changed class to rect -->
+                                <i class="fa-brands fa-r-project" title="R Programming"></i>
+                                <i class="fa-solid fa-chart-bar" title="Data Visualization"></i>
+                            </div>
                             <div class="project-media-container">
                                 <img src="images/portfolio/additional_projects/project_ESS/image1.png" alt="European Social Survey Analysis" class="img-fluid project-image">
                             </div>
                             <h3>European Social Survey (ESS) Analysis</h3>
-                            <p>Explored the correlation between internet/news consumption and climate opinion using univariate and bivariate statistics. Analyzed age-internet use relationships.</p>
+                            <div class="project-keywords-container">
+                                <span class="keyword-box">R</span>
+                                <span class="keyword-box">Data Analysis</span>
+                                <span class="keyword-box">Statistical Analysis</span>
+                                <span class="keyword-box">Survey Data</span>
+                                <span class="keyword-box">Climate Opinion</span>
+                                <span class="keyword-box">Correlation</span>
+                            </div>
                         </div>
                     </a>
                 </div>
                 <!-- Project Card 2: The Incredible Machine (Original Additional Project) -->
-                <div class="col-md-6 col-lg-4 mb-4"> <!-- Changed to col-lg-4 for 3-column layout -->
+                <div class="col-md-6 col-lg-4 project-col-spacing"> <!-- Added project-col-spacing for row spacing -->
                     <a href="https://github.com/SAMIULSAJAL/The_incredible_machine" target="_blank" class="project-card-link" data-project-id="incredible-machine">
                         <div class="project-card card-style">
+                            <!-- Icons are now directly inside project-card for positioning -->
+                            <div class="project-icons-rect"> <!-- Changed class to rect -->
+                                <i class="fa-brands fa-python" title="Python Programming"></i>
+                            </div>
                             <div class="project-media-container">
                                 <img src="images/portfolio/additional_projects/project_incredible_machine/incredible_machine.gif" alt="The Incredible Machine Simulation" class="img-fluid project-image">
                             </div>
                             <h3>The Incredible Machine (Python)</h3>
-                            <p>A Python simulation inspired by the classic game, modeling particles moving under forces like gravity and interacting with walls. Features modular classes for customizable setups and real-time animation.</p>
+                            <div class="project-keywords-container">
+                                <span class="keyword-box">Python</span>
+                                <span class="keyword-box">Physics Simulation</span>
+                                <span class="keyword-box">Molecular Dynamics</span>
+                                <span class="keyword-box">Game Logic</span>
+                                <span class="keyword-box">OOP</span>
+                                <span class="keyword-box">Animation</span>
+                            </div>
                         </div>
                     </a>
                 </div>
                 <!-- Project Card 3: Arctic Ice Map Analysis (Original Additional Project) -->
-                <div class="col-md-6 col-lg-4 mb-4"> <!-- Changed to col-lg-4 for 3-column layout -->
+                <div class="col-md-6 col-lg-4 project-col-spacing"> <!-- Added project-col-spacing for row spacing -->
                     <a href="https://github.com/SAMIULSAJAL/arctic_ice_map" target="_blank" class="project-card-link" data-project-id="arctic-ice-map">
                         <div class="project-card card-style">
+                            <!-- Icons are now directly inside project-card for positioning -->
+                            <div class="project-icons-rect"> <!-- Changed class to rect -->
+                                <i class="fa-brands fa-python" title="Python Programming"></i>
+                                <i class="fa-solid fa-map" title="Geospatial Analysis"></i>
+                            </div>
                             <div class="project-media-container">
                                 <img src="images/portfolio/additional_projects/project_ice_map/image1.png" alt="Arctic Ice Map Analysis" class="img-fluid project-image">
                             </div>
                             <h3>Arctic Ice Map Analysis</h3>
-                            <p>Analyzed 20 years of satellite data to visualize the progressive loss of Arctic ice concentration, highlighting environmental changes.</p>
+                            <div class="project-keywords-container">
+                                <span class="keyword-box">Python</span>
+                                <span class="keyword-box">Satellite Data</span>
+                                <span class="keyword-box">Ice Concentration</span>
+                                <span class="keyword-box">Climate Change</span>
+                                <span class="keyword-box">Data Visualization</span>
+                                <span class="keyword-box">Geospatial</span>
+                            </div>
                         </div>
                     </a>
                 </div>
                 <!-- Project Card 4: Lab Experiments Data Analysis (Original Additional Project) -->
-                <div class="col-md-6 col-lg-4 mb-4"> <!-- Changed to col-lg-4 for 3-column layout -->
+                <div class="col-md-6 col-lg-4 project-col-spacing"> <!-- Added project-col-spacing for row spacing -->
                     <a href="https://github.com/SAMIULSAJAL/your-lab-report-repo" target="_blank" class="project-card-link" data-project-id="lab-report">
                         <div class="project-card card-style">
+                            <!-- Icons are now directly inside project-card for positioning -->
+                            <div class="project-icons-rect"> <!-- Changed class to rect -->
+                                <i class="fa-brands fa-python" title="Python Programming"></i>
+                            </div>
                             <div class="project-media-container">
                                 <img src="images/portfolio/additional_projects/project_lab_report/image5.jpg" alt="Lab Experiments Data Analysis" class="img-fluid project-image">
                             </div>
                             <h3>Lab Experiments Data Analysis</h3>
-                            <p>Conducted in-depth analysis of experimental data from physics lab reports, applying statistical methods and creating visualizations to interpret results and draw conclusions.</p>
+                            <div class="project-keywords-container">
+                                <span class="keyword-box">NumPy</span>
+                                <span class="keyword-box">SciPy</span>
+                                <span class="keyword-box">Matplotlib</span>
+                                <span class="keyword-box">Polynomial Fitting</span>
+                                <span class="keyword-box">Complex Numbers</span>
+                                <span class="keyword-box">Background Subtraction</span>
+                                <span class="keyword-box">Experimental Data</span>
+                                <span class="keyword-box">Data Analysis</span>
+                            </div>
                         </div>
                     </a>
                 </div>
 
                 <!-- Project Card: Business Automation with Google Sheets & MS Excel (Reformatted and moved to last) -->
-                <div class="col-md-6 col-lg-4 mb-4"> <!-- Changed to col-lg-4 for 3-column layout -->
+                <div class="col-md-6 col-lg-4 project-col-spacing"> <!-- Added project-col-spacing for row spacing -->
                     <a href="project_google_sheet_business_analysis.html" style="text-decoration: none; color: inherit;" class="project-card-link">
                         <div class="project-card card-style">
+                            <!-- Icons are now directly inside project-card for positioning -->
+                            <div class="project-icons-rect"> <!-- Changed class to rect -->
+                                <i class="fa-brands fa-google" title="Google Sheets"></i> <!-- Changed to Font Awesome Google icon -->
+                                <i class="fa-solid fa-file-excel" title="Microsoft Excel"></i> <!-- Changed to Font Awesome Excel icon -->
+                            </div>
                             <div class="project-media-container">
                                 <img src="images/business-automation-thumbnail.png" alt="Google Sheets & Excel Project" class="img-fluid project-image">
                             </div>
                             <h3>Business Automation with Google Sheets & MS Excel</h3>
-                            <p>Developed an automated system for sales, purchases, salary, and attendance tracking for a family business, including dynamic dashboards and inventory management.</p>
+                            <div class="project-keywords-container">
+                                <span class="keyword-box">Google Sheets</span>
+                                <span class="keyword-box">MS Excel</span>
+                                <span class="keyword-box">Business Automation</span>
+                                <span class="keyword-box">Financial Analysis</span>
+                                <span class="keyword-box">Data Management</span>
+                                <span class="keyword-box">Dashboards</span>
+                                <span class="keyword-box">Inventory</span>
+                                <span class="keyword-box">HR</span>
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -627,6 +871,16 @@
 
         </div>
     </section>
+
+
+
+
+
+
+
+
+
+
 
 
 
