@@ -159,7 +159,7 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5); }
+    background: rgba(0, 0, 0, 0.2); }
   .site-hero h1 {
     font-weight: 200;
     margin-bottom: 20px;
@@ -413,7 +413,7 @@ a {
   border-radius: 10px; }
 
 .portfolio-area .filters-content .p-inner {
-  padding: 0px 0px;
+  padding: 20px 0px;
   text-align: center; }
 
 .portfolio-area .filters-content .item .p-inner .cat {

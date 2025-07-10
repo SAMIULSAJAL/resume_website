@@ -686,14 +686,14 @@
 
 
 
-	<section class="site-hero" style="background-image: url(images/image_1.jpg);" id="section-home" data-stellar-background-ratio="0.5">
+	<section class="site-hero" style="background-image: url(images/photo_gallery/image1.jpg);" id="section-home" data-stellar-background-ratio="0.5">
 		<div class="container">
 			<div class="row intro-text align-items-center justify-content-center">
 				<div class="col-md-10 text-center pt-5">
 					
 					<!-- Modified: Added margin-top to lower the heading text -->
 					<h1 class="site-heading site-animate" style="margin-top: 200px;">Hello, I'm <strong class="d-block">Samiul Hossain Sajal</strong></h1>
-					<strong class="d-block text-white text-uppercase letter-spacing">and this is My Resume</strong>
+					<strong class="d-block text-white text-uppercase letter-spacing">and welcome to my Profile</strong>
 
 				</div>
 			</div>
@@ -1050,100 +1050,201 @@
 
 
 
-
-
-
-
-
-
-
-
-	
-                <!-- Technical Training Section (formerly Online Courses) -->
+                <!-- Technical Training Section -->
                 <div class="col-md-12 mt-5">
                     <h2 class="mb-5">Technical Training</h2>
                 </div>
     
-                <div class="col-md-6">
-                    <div class="resume-item mb-4 card-style">
-                        <div class="course-icons-top-right"> <!-- New div for top-right icons -->
-                            <i class="fa-brands fa-google" title="Google Data Analytics"></i>
-                            <i class="fa-solid fa-database" title="SQL"></i>
-                            <i class="fa-brands fa-r-project" title="R Programming"></i>
-                            <i class="fa-solid fa-chart-bar" title="Tableau / Data Visualization"></i>
+                <!-- Row 1: Google Data Analytics Professional Certificate (Full Width) -->
+                <div class="row justify-content-center">
+                    <div class="col-md-12 mb-4"> <!-- Full width for this row -->
+                        <div class="resume-item card-style">
+                            <!-- Removed course-icons-top-left div -->
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-8">
+                                    <h3>Google Data Analytics Professional Certificate</h3>
+                                    <p class="course-series-info">8 course series</p> <!-- Added course series info -->
+                                    <div class="course-specializations-container">
+                                        <span class="specialization-box">1. Foundations: Data, Data, Everywhere</span>
+                                        <span class="specialization-box">2. Ask Questions to Make Data-Driven Decisions</span>
+                                        <span class="specialization-box">3. Prepare Data for Exploration</span>
+                                        <span class="specialization-box">4. Process Data from Dirty to Clean</span>
+                                        <span class="specialization-box">5. Analyze Data to Answer Questions</span>
+                                        <span class="specialization-box">6. Share Data Through the Art of Visualization</span>
+                                        <span class="specialization-box">7. Data Analysis with R Programming</span>
+                                        <span class="specialization-box">8. Capstone: A Case Study</span>			
+                                    </div>
+                                </div>
+                                <div class="col-4 text-right">
+                                    <a href="images/technical_training/google_data_analytics.jpg" target="_blank">
+                                        <img src="images/technical_training/google_data_analytics.jpg" alt="Google Data Analytics Certificate" class="certificate-thumbnail mb-2">
+                                    </a>
+                                    <!-- Removed Google Badge -->
+                                </div>
+                            </div>
                         </div>
-                        <span class="date"><span class="icon-calendar"></span> Completed</span>
-                        <h3>Google Data Analytics Professional Certificate</h3>
-                        <ul>
-                            <li>Data cleaning, visualization, and analysis using SQL, R, and Tableau.</li>
-                            <li>Practical case studies applying statistical methods in business analytics.</li>
-                            <li>Building interactive dashboards and automated reports.</li>
-                        </ul>
                     </div>
+                </div>
     
-                    <div class="resume-item mb-4 card-style">
-                        <div class="course-icons-top-right">
-                            <i class="fa-brands fa-python" title="Python Programming"></i>
-                            <i class="fa-solid fa-database" title="Databases (SQLite)"></i>
+                <!-- Row 2: Python for Everybody (Full Width) -->
+                <div class="row justify-content-center">
+                    <div class="col-md-12 mb-4"> <!-- Full width for this row -->
+                        <div class="resume-item card-style">
+                            <!-- Removed course-icons-top-left div -->
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-8">
+                                    <h3>Python for Everybody</h3>
+                                    <p class="course-series-info">5 course series</p> <!-- Added course series info -->
+                                    <div class="course-specializations-container">
+                                        <span class="specialization-box">1. Getting Started with Python</span>
+										<span class="specialization-box">2. Python Data Structures</span>
+                                        <span class="specialization-box">3. Using Python to Access Web Data</span>
+                                        <span class="specialization-box">4. Using Databases with Python</span>
+                                        <span class="specialization-box">5. Capstone: Retrieving, Processing, and Visualizing Data with Python</span>
+                                    </div>
+                                </div>
+                                <div class="col-4 text-right">
+                                    <a href="images/technical_training/python_for_everybody.jpg" target="_blank">
+                                        <img src="images/technical_training/python_for_everybody.jpg" alt="Python for Everybody Certificate" class="certificate-thumbnail">
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <span class="date"><span class="icon-calendar"></span> Completed</span>
-                        <h3>Python for Everybody</h3>
-                        <ul>
-                            <li>Python programming fundamentals: variables, loops, and data structures.</li>
-                            <li>Accessing web data using APIs and JSON.</li>
-                            <li>Using databases with Python (SQLite and SQL queries).</li>
-                        </ul>
                     </div>
                 </div>
     
-                <div class="col-md-6">
-                    <div class="resume-item mb-4 card-style">
-                        <div class="course-icons-top-right">
-                            <i class="fa-brands fa-r-project" title="R Programming"></i>
-                            <i class="fa-solid fa-chart-line" title="Statistical Analysis"></i>
+                <!-- Row 3: Container for the remaining 3 courses (3 Columns) -->
+                <div class="row justify-content-center">
+                    <!-- Scientific Programming in Python -->
+                    <div class="col-md-12 col-lg-4 mb-4"> <!-- Now a direct col-lg-4 of this row -->
+                        <div class="resume-item card-style">
+                            <!-- Removed course-icons-top-left div -->
+                            <h3>Scientific Programming in Python</h3>
+                            <div class="project-keywords-container">
+                                <span class="keyword-box">NumPy</span>
+                                <span class="keyword-box">SciPy</span>
+                                <span class="keyword-box">Matplotlib</span>
+                                <span class="keyword-box">Computational Physics</span>
+                            </div>
                         </div>
-                        <span class="date"><span class="icon-calendar"></span> Completed</span>
-                        <h3>Every Number Tells a Story</h3>
-                        <ul>
-                            <li>Data analysis using R for statistical insights.</li>
-                            <li>Fundamentals of regression analysis and probability distributions.</li>
-                            <li>Hands-on experience with real-world datasets.</li>
-                        </ul>
                     </div>
-    
-                    <div class="resume-item mb-4 card-style">
-                        <div class="course-icons-top-right">
-                            <i class="fa-brands fa-python" title="Python Programming"></i>
-                            <i class="fa-solid fa-calculator" title="Scientific Computing (NumPy, SciPy)"></i>
-                            <i class="fa-solid fa-chart-area" title="Data Visualization (Matplotlib)"></i>
+                    <!-- Intensive Julia Programming Workshop -->
+                    <div class="col-md-12 col-lg-4 mb-4"> <!-- Now a direct col-lg-4 of this row -->
+                        <div class="resume-item card-style">
+                            <!-- Removed course-icons-top-left div -->
+                            <h3>Intensive Julia Programming Workshop</h3>
+                            <div class="project-keywords-container">
+                                <span class="keyword-box">Julia</span>
+                                <span class="keyword-box">High-Performance Computing</span>
+                                <span class="keyword-box">DataFrames</span>
+                                <span class="keyword-box">Visualization</span>
+                            </div>
                         </div>
-                        <span class="date"><span class="icon-calendar"></span> Completed</span>
-                        <h3>Scientific Programming in Python</h3>
-                        <ul>
-                            <li>Scientific computing with NumPy, SciPy, and Matplotlib.</li>
-                            <li>Solving physics-based problems using computational techniques.</li>
-                        </ul>
                     </div>
-    
-                    <div class="resume-item mb-4 card-style">
-                        <div class="course-icons-top-right">
-                            <i class="fa-solid fa-code" title="Julia Programming"></i> <!-- Using generic code icon for Julia -->
+                    <!-- Every Number Tells a Story -->
+                    <div class="col-md-12 col-lg-4 mb-4"> <!-- Now a direct col-lg-4 of this row -->
+                        <div class="resume-item card-style">
+                            <!-- Removed course-icons-top-left div -->
+                            <h3>Every Number Tells a Story</h3>
+                            <div class="project-keywords-container">
+                                <span class="keyword-box">R</span>
+                                <span class="keyword-box">Statistical Insights</span>
+                                <span class="keyword-box">Regression</span>
+                                <span class="keyword-box">Probability Distributions</span>
+                            </div>
                         </div>
-                        <span class="date"><span class="icon-calendar"></span> Completed</span>
-                        <h3>Intensive Julia Programming Workshop</h3>
-                        <ul>
-                            <li>Introduction to Julia for high-performance scientific computing.</li>
-                            <li>Working with data frames and visualization in Julia.</li>
-                        </ul>
                     </div>
                 </div>
+    
+    <!-- CSS for Technical Training Section Icons -->
+    <style>
+        /* New styles for course items */
+        .resume-item.card-style {
+            position: relative; /* Ensure positioning context for absolute icons */
+            padding: 1.5rem; /* Adjusted padding */
+            /* min-height: 250px; Removed min-height to allow dynamic expansion */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            overflow: hidden; /* Changed to hidden to contain content */
+            /*background-color: #2c2c2c;  Darker background for cards */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Removed .course-icons-top-left styles as icons are removed */
+
+        /* Styles for certificate thumbnails and badges */
+        .certificate-thumbnail {
+            width: 270px; /* Increased width */
+            height: 200px; /* Increased height */
+            object-fit: cover; /* Ensure image covers the area */
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .badge-icon {
+            height: 40px; /* Size for the badge */
+            width: auto;
+            margin-top: 5px; /* Space below certificate */
+        }
+
+        /* Styles for specialization keyword boxes (similar to project keywords) */
+        .course-specializations-container, .project-keywords-container { /* Added project-keywords-container */
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 1rem;
+            flex-grow: 1;
+            /* Removed min-height and overflow-y to allow dynamic height */
+            /* Removed padding-right */
+        }
+
+        .specialization-box, .keyword-box { /* Combined styles for consistency */
+            background-color: #2b2a2a;
+            color: #b0b0b0; /* Matching description font color */
+            border-radius: 5px;
+            padding: 5px 10px;
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+
+        /* Ensure existing resume-item styling applies to these cards */
+        .resume-item.card-style h3 {
+            color: #ff8c00;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            min-height: 2.5em; /* Ensure consistent height for titles */
+            display: flex;
+            align-items: center;
+        }
+
+        .course-series-info {
+            color: #b0b0b0; /* Color for the series info text */
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Hide bullet points if any were implicitly generated by ul/li */
+        .resume-item.card-style ul {
+            display: none;
+        }
+    </style>
+
+
+
+
+
+
+
+
 
 
 
 
 
 				<!-- Professional Experience -->
-				<div class="col-md-12">
+				<div class="col-md-12 mt-5">
 					<h2 class="mb-5">Professional Experience</h2>
 				</div>
 
