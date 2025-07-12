@@ -683,7 +683,7 @@
 
 
 
-	<section class="site-hero" style="background-image: url(images/photo_gallery/image1.jpg);" id="section-home" data-stellar-background-ratio="0.5">
+	<section class="site-hero" style="background-image: url(images/photo_gallery/image5.jpg);" id="section-home" data-stellar-background-ratio="0.5">
 		<div class="container">
 			<div class="row intro-text align-items-center justify-content-center">
 				<div class="col-md-10 text-center pt-5">
@@ -938,16 +938,16 @@
 
 				<!-- MSc Thesis Project Section Container -->
 				<section class="thesis-section-container">
-				<div class="section-heading">
-					<h2 class="text-white">Research <strong>Experience</strong></h2>
-					<p class="text-gray-300 mt-2">A deep dive into advanced materials simulation and analysis.</p>
-				</div>
+                <div class="col-md-12 mt-5">
+                    <h2 class="mb-5">Research Experience</h2>
+                </div>                    
+
 
 				<div class="thesis-content-flex">
 
 					<!-- Left Column: Thesis Description Text -->
 					<div class="thesis-text-column">
-					<h2 class="thesis-title">
+					<h2 class="thesis-title mt-5">
 						Master's Thesis: Formation and oxidation of nano transition metals in the laser ablation technique by the ReaxFF reactive force field using Molecular Dynamics in High-Performance Computers.
 					</h2>
 					<p class="thesis-paragraph">
@@ -969,27 +969,27 @@
 						<!-- Image 1 -->
 						<div class="thesis-image-wrapper">
 						<img src="images/research_experience/image1.png" alt="Thesis Image 1: Initial Configuration" onerror="this.onerror=null;this.src='https://placehold.co/600x400/333333/FFFFFF?text=Image%201';">
-						<p class="thesis-image-caption">Initial simulation setup</p>
+						<p class="thesis-image-caption">Schematic diagram of PLAL</p>
 						</div>
 						<!-- Image 2 -->
 						<div class="thesis-image-wrapper">
 						<img src="images/research_experience/image2.png" alt="Thesis Image 2: Nanoparticle Formation" onerror="this.onerror=null;this.src='https://placehold.co/600x400/333333/FFFFFF?text=Image%202';">
-						<p class="thesis-image-caption">Nanoparticle formation over time</p>
+						<p class="thesis-image-caption">Initial configuration</p>
 						</div>
 						<!-- Image 3 -->
 						<div class="thesis-image-wrapper">
 						<img src="images/research_experience/image3.png" alt="Thesis Image 3: Structural Analysis" onerror="this.onerror=null;this.src='https://placehold.co/600x400/333333/FFFFFF?text=Image%203';">
-						<p class="thesis-image-caption">Structural analysis of ANPs</p>
+						<p class="thesis-image-caption">Snapshots at 47.18 ns</p>
 						</div>
 						<!-- Image 4 -->
 						<div class="thesis-image-wrapper">
 						<img src="images/research_experience/image4.png" alt="Thesis Image 4: Temperature Rate Comparison" onerror="this.onerror=null;this.src='https://placehold.co/600x400/333333/FFFFFF?text=Image%204';">
-						<p class="thesis-image-caption">Effect of temperature decrease rate</p>
+						<p class="thesis-image-caption">Applied cluster analysis modifier</p>
 						</div>
 						<!-- Image 5 -->
 						<div class="thesis-image-wrapper">
 						<img src="images/research_experience/image5.png" alt="Thesis Image 5: Final Nanoparticle State" onerror="this.onerror=null;this.src='https://placehold.co/600x400/333333/FFFFFF?text=Image%205';">
-						<p class="thesis-image-caption">Final state of synthesized nanoparticles</p>
+						<p class="thesis-image-caption">apply "Construct surface mesh" modifier</p>
 						</div>
 						<!-- Add more image divs here following the same structure if needed (up to 8) -->
 					</div>
@@ -1036,6 +1036,153 @@
 
 
 
+
+
+
+
+
+    <!-- ---------------------- Poster Presentation Section --------------------- -->
+    <section class="site-section" id="section-poster">
+        <div class="container">
+            <!-- Updated Section Heading Style -->
+            <div class="col-md-12 mb-5">
+                <h2>Poster Presentation</h2>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-md-12 col-lg-12 mb-4"> <!-- Made wider to span full container width -->
+                    <div class="poster-card card-style">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col-md-9 d-flex flex-column justify-content-center text-center text-md-left"> <!-- Left side for details -->
+                                <div class="poster-details">
+                                    <h3>Atomic-scale investigation of the formation of Al nano-cluster in the Pulsed Laser Ablation Technique</h3>
+                                    <p class="organization-info">Bangladesh Physical Society, 2021</p>
+                                    <p class="authors">Authors: Samiul Hossain Sajal, Nithika Datta, and Dr Md Enamul Hoque (supervisor)</p>
+                                    <p class="doi-info">DOI: <a href="https://doi.org/10.13140/RG.2.2.30646.47682" target="_blank">10.13140/RG.2.2.30646.47682</a></p>
+                                    <!-- Removed the "View full poster" link container -->
+                                </div>
+                            </div>
+                            <div class="col-md-3"> <!-- Right side for image -->
+                                <div class="poster-image-container">
+                                    <img src="images/poster/BPS_2021_Poster.jpg" alt="Atomic-scale investigation of the formation of Al nano-cluster in the Pulsed Laser Ablation Technique" class="img-fluid poster-image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CSS for Poster Presentation Section -->
+    <style>
+        /* Re-applying the section heading style from Technical Training */
+
+        .poster-card {
+            border-radius: 8px;
+            padding: 1.5rem;
+            /* Removed box-shadow and transition for hover effect */
+            /* Removed background-color completely */
+        }
+
+        /* Removed .poster-card:hover styles */
+
+        .poster-image-container {
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 0;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Kept shadow for the image container */
+            padding-left: 1rem; /* Add some space between text and image on desktop */
+        }
+
+        @media (max-width: 767.98px) {
+            .poster-image-container {
+                padding-left: 0; /* Remove padding on mobile */
+                margin-top: 1.5rem; /* Add space between text and image on mobile */
+            }
+        }
+
+        .poster-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .poster-details {
+            padding-right: 1rem; /* Add some space between text and image on desktop */
+            text-align: left; /* Ensure text is left-aligned on desktop */
+        }
+
+        @media (max-width: 767.98px) {
+            .poster-details {
+                padding-right: 0; /* Remove padding on mobile */
+                text-align: center; /* Ensure text is centered on mobile */
+            }
+        }
+
+        .poster-details h3 {
+            color: #ff8c00; /* Orange for title */
+            font-size: 1.5rem; /* Larger title */
+            margin-bottom: 0.5rem;
+        }
+
+        .poster-details .organization-info {
+            color: #b0b0b0; /* Lighter text for dark background */
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .poster-details .authors {
+            color: #b0b0b0; /* Lighter text for dark background */
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem; /* Added margin for spacing with DOI */
+        }
+
+        .poster-details .doi-info {
+            color: #b0b0b0;
+            font-size: 0.9rem;
+            /* Removed margin-bottom: 1rem; as it's no longer needed for spacing with a link below */
+        }
+
+        .poster-details .doi-info a {
+            color: #ff8c00; /* Link color for DOI */
+            text-decoration: underline;
+        }
+
+        /* Removed .poster-text-link and its hover styles */
+
+        /* Responsive adjustments */
+        @media (max-width: 767.98px) {
+            .poster-details h3 {
+                font-size: 1.2rem;
+            }
+            .poster-details .organization-info,
+            .poster-details .authors,
+            .poster-details .doi-info {
+                font-size: 0.85rem;
+            }
+            /* The .text-md-left class will revert to its default (left-aligned) on screens >= md.
+               For mobile (below md), it will be overridden by .text-center in .poster-details. */
+            .col-md-6.text-md-left {
+                text-align: center !important;
+            }
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+                
 
 
 
