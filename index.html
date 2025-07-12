@@ -1189,7 +1189,6 @@
 
 
 
-
                 <!-- Technical Training Section -->
                 <div class="col-md-12 mt-5">
                     <h2 class="mb-5">Technical Training</h2>
@@ -1201,7 +1200,7 @@
                         <div class="resume-item card-style">
                             <!-- Removed course-icons-top-left div -->
                             <div class="row no-gutters align-items-center">
-                                <div class="col-8">
+                                <div class="col-12 col-md-8 order-2 order-md-1 text-center text-md-left"> <!-- Details: order 2 on mobile, order 1 on desktop -->
                                     <h3>Google Data Analytics Professional Certificate</h3>
                                     <p class="course-series-info">8 course series</p> <!-- Added course series info -->
                                     <div class="course-specializations-container">
@@ -1212,14 +1211,13 @@
                                         <span class="specialization-box">5. Analyze Data to Answer Questions</span>
                                         <span class="specialization-box">6. Share Data Through the Art of Visualization</span>
                                         <span class="specialization-box">7. Data Analysis with R Programming</span>
-                                        <span class="specialization-box">8. Capstone: A Case Study</span>			
+                                        <span class="specialization-box">8. Capstone: A Case Study</span>           
                                     </div>
                                 </div>
-                                <div class="col-4 text-right">
+                                <div class="col-12 col-md-4 order-1 order-md-2 text-center text-md-right"> <!-- Image: order 1 on mobile, order 2 on desktop -->
                                     <a href="images/technical_training/google_data_analytics.jpg" target="_blank">
                                         <img src="images/technical_training/google_data_analytics.jpg" alt="Google Data Analytics Certificate" class="certificate-thumbnail mb-2">
                                     </a>
-                                    <!-- Removed Google Badge -->
                                 </div>
                             </div>
                         </div>
@@ -1232,18 +1230,18 @@
                         <div class="resume-item card-style">
                             <!-- Removed course-icons-top-left div -->
                             <div class="row no-gutters align-items-center">
-                                <div class="col-8">
+                                <div class="col-12 col-md-8 order-2 order-md-1 text-center text-md-left"> <!-- Details: order 2 on mobile, order 1 on desktop -->
                                     <h3>Python for Everybody</h3>
                                     <p class="course-series-info">5 course series</p> <!-- Added course series info -->
                                     <div class="course-specializations-container">
                                         <span class="specialization-box">1. Getting Started with Python</span>
-										<span class="specialization-box">2. Python Data Structures</span>
+                                        <span class="specialization-box">2. Python Data Structures</span>
                                         <span class="specialization-box">3. Using Python to Access Web Data</span>
                                         <span class="specialization-box">4. Using Databases with Python</span>
                                         <span class="specialization-box">5. Capstone</span>
                                     </div>
                                 </div>
-                                <div class="col-4 text-right">
+                                <div class="col-12 col-md-4 order-1 order-md-2 text-center text-md-right"> <!-- Image: order 1 on mobile, order 2 on desktop -->
                                     <a href="images/technical_training/python_for_everybody.jpg" target="_blank">
                                         <img src="images/technical_training/python_for_everybody.jpg" alt="Python for Everybody Certificate" class="certificate-thumbnail">
                                     </a>
@@ -1258,7 +1256,7 @@
                     <!-- Scientific Programming in Python -->
                     <div class="col-md-12 col-lg-4 mb-4"> <!-- Now a direct col-lg-4 of this row -->
                         <div class="resume-item card-style">
-                            <!-- Removed course-icons-top-left div -->
+                            <!-- Removed course-icons-top-right div -->
                             <h3>Scientific Programming in Python</h3>
                             <div class="project-keywords-container">
                                 <span class="keyword-box">NumPy</span>
@@ -1274,7 +1272,7 @@
                     <!-- Intensive Julia Programming Workshop -->
                     <div class="col-md-12 col-lg-4 mb-4"> <!-- Now a direct col-lg-4 of this row -->
                         <div class="resume-item card-style">
-                            <!-- Removed course-icons-top-left div -->
+                            <!-- Removed course-icons-top-right div -->
                             <h3>Intensive Julia Programming Workshop</h3>
                             <div class="project-keywords-container">
                                 <span class="keyword-box">Julia</span>
@@ -1287,7 +1285,7 @@
                     <!-- Every Number Tells a Story -->
                     <div class="col-md-12 col-lg-4 mb-4"> <!-- Now a direct col-lg-4 of this row -->
                         <div class="resume-item card-style">
-                            <!-- Removed course-icons-top-left div -->
+                            <!-- Removed course-icons-top-right div -->
                             <h3>Every Number Tells a Story</h3>
                             <div class="project-keywords-container">
                                 <span class="keyword-box">R</span>
@@ -1305,7 +1303,6 @@
         .resume-item.card-style {
             position: relative; /* Ensure positioning context for absolute icons */
             padding: 1.5rem; /* Adjusted padding */
-            /* min-height: 250px; Removed min-height to allow dynamic expansion */
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
@@ -1313,6 +1310,7 @@
             /*background-color: #2c2c2c;  Darker background for cards */
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            min-height: 250px; /* Re-added min-height for consistency */
         }
 
         /* Removed .course-icons-top-left styles as icons are removed */
@@ -1372,7 +1370,11 @@
         .resume-item.card-style ul {
             display: none;
         }
+
+        /* Removed styles for top-left icons */
+        /* Removed styles for top-right icons */
     </style>
+
 
 
 
