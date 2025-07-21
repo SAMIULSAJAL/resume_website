@@ -844,3 +844,17 @@ a {
     background-color: #fed7d7; /* red-100 */
     color: #c53030; /* red-700 */
 }
+
+
+
+
+
+
+/* For all input fields and textarea inside your contact form */
+#contactForm input,
+#contactForm textarea {
+    color: white !important;
+
+}
+
+
