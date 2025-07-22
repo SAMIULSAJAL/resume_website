@@ -1925,6 +1925,8 @@
                         <div style="display: none;">
                             <input type="text" name="website" tabindex="-1" autocomplete="off">
                         </div>
+                        <!-- NEW: Hidden field to store page load timestamp for rapid submission check -->
+                        <input type="hidden" name="pageLoadTimestamp" id="pageLoadTimestamp">
 
                         <div class="form-group">
                             <input type="text" class="form-control px-3 py-4" placeholder="Your Name" name="fullName" required>
@@ -1966,15 +1968,13 @@
         </div>
     </section>
 
-
-
-
-
-
-
-
-
+    <!-- NEW: JavaScript to populate the timestamp and handle responses -->
     <script>
+        // Populate the hidden timestamp field on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('pageLoadTimestamp').value = new Date().getTime();
+        });
+
         document.getElementById('contactForm').addEventListener('submit', async function(event) {
             event.preventDefault(); // Prevent default form submission
 
@@ -1983,42 +1983,40 @@
             const responseMessageDiv = document.getElementById('formResponseMessage');
             responseMessageDiv.style.display = 'none'; // Hide previous messages
             responseMessageDiv.textContent = ''; // Clear previous text
+            responseMessageDiv.className = 'mt-4 text-center font-semibold p-2 rounded-lg'; // Reset class
 
             try {
-                // Fetch to the Google Apps Script web app URL
                 const response = await fetch(form.action, {
                     method: 'POST',
-                    body: formData // FormData handles multipart/form-data for us
+                    body: formData
                 });
 
                 const result = await response.text(); // Get response as text
 
-                if (response.ok) { // Check if the HTTP status is 2xx
+                // Crucial change: Check the content of the result, not just response.ok
+                // The Apps Script returns 200 OK even for blocked spam, but with a specific message.
+                if (result.includes("Message received successfully!")) {
                     responseMessageDiv.textContent = 'Message sent successfully!';
-                    responseMessageDiv.className = 'success';
+                    // Assuming you have 'success' class for styling, or add Tailwind classes
+                    responseMessageDiv.classList.add('success', 'text-green-500', 'bg-green-100');
                     form.reset(); // Clear the form
+                    // Re-populate the timestamp after reset for subsequent submissions
+                    document.getElementById('pageLoadTimestamp').value = new Date().getTime();
                 } else {
-                    // Attempt to parse result if it's JSON, otherwise display as text
-                    let errorMessage = 'Failed to send message.';
-                    try {
-                        const errorJson = JSON.parse(result);
-                        errorMessage += ' Error: ' + (errorJson.error || result);
-                    } catch (e) {
-                        errorMessage += ' Error: ' + result;
-                    }
-                    responseMessageDiv.textContent = errorMessage;
-                    responseMessageDiv.className = 'error';
+                    // This will now display the specific spam blocking message from the Apps Script
+                    responseMessageDiv.textContent = result;
+                    // Assuming you have 'error' class for styling, or add Tailwind classes
+                    responseMessageDiv.classList.add('error', 'text-red-500', 'bg-red-100');
                 }
             } catch (error) {
                 console.error('Error:', error);
-                responseMessageDiv.textContent = 'An error occurred while sending the message.';
-                responseMessageDiv.className = 'error';
+                responseMessageDiv.textContent = 'An unexpected error occurred while sending the message.';
+                responseMessageDiv.classList.add('error', 'text-red-500', 'bg-red-100');
             } finally {
                 responseMessageDiv.style.display = 'block'; // Show the message
             }
         });
     </script>
-
 
 
 
