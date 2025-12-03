@@ -911,3 +911,9 @@ a {
         margin-left: 6px !important;
     }
 }
+
+/* Ensure school-info color is correct on all devices */
+.resume-item .school-info {
+    color: #ca654c !important;
+    font-size: 1rem;
+}
