@@ -484,7 +484,7 @@ a {
     margin-bottom: 10px;
     font-size: 12px;
     font-weight: 700;
-    color: #fff; }
+    color: #edecec; }
   .resume-item .school {
     display: block;
     font-size: 16px; }
@@ -492,7 +492,7 @@ a {
     color: #ca654c;
     font-size: 20px; }
   .resume-item .school {
-    color: rgba(255, 255, 255, 0.3); }
+    color: rgba(255, 255, 255, 0.593); }
   .resume-item *:last-child {
     margin-bottom: 0; }
 
@@ -858,3 +858,24 @@ a {
 }
 
 
+
+
+.tree-bullet-container {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: #c1bcbca1; /* brighter text */
+}
+
+
+.fzj-logo {
+    height: 22px;
+    margin-left: 168px;
+    vertical-align: middle;
+    filter: invert(51%) sepia(76%) saturate(3440%) hue-rotate(1deg) brightness(80%) contrast(80%);
+}
+
+.school-info {
+    color: #ca654c; /* choose any color */
+    font-size: 1rem;
+
+}
