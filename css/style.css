@@ -866,23 +866,48 @@ a {
     color: #c1bcbca1; /* brighter text */
 }
 
-
+/*
 .fzj-logo {
     height: 22px;
     margin-left: 168px;
     vertical-align: middle;
     filter: invert(51%) sepia(76%) saturate(3440%) hue-rotate(1deg) brightness(80%) contrast(80%);
 }
+*/
+/*
 
 .school-info {
-    color: #ca654c; /* choose any color */
+    color: #ca654c;
     font-size: 1rem;
 
 }
 
+*/
+
+
+/* Desktop logo style */
+.fzj-logo {
+    height: 22px;
+    margin-left: 8px;   /* small spacing only */
+    vertical-align: middle;
+    filter: invert(51%) sepia(76%) saturate(3440%) hue-rotate(1deg) brightness(80%) contrast(80%);
+}
+
+/* Add space between the two logos */
+.school img.fzj-logo + img.fzj-logo {
+    margin-left: 12px;   /* adjust this number to increase or decrease spacing */
+}
+
+/* Mobile fix */
 @media (max-width: 600px) {
     .fzj-logo {
-        height: 16px !important;   /* smaller logos on mobile */
+        height: 14px !important;
+        margin-left: 4px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .school img.fzj-logo + img.fzj-logo {
         margin-left: 6px !important;
     }
 }
