@@ -285,9 +285,7 @@ button, input, textarea { font: inherit; }
 
 .section-heading {
   display: grid;
-  grid-template-columns: 1fr minmax(280px, 0.45fr);
-  gap: 64px;
-  align-items: end;
+  grid-template-columns: 1fr;
   margin-bottom: 48px;
   padding-bottom: 22px;
   border-bottom: 1px solid var(--line);
@@ -295,10 +293,6 @@ button, input, textarea { font: inherit; }
 
 .section-heading .eyebrow { margin-bottom: 12px; }
 .section-heading h2 { margin: 0; font-family: var(--font-serif); font-size: clamp(40px, 4.4vw, 60px); font-weight: 400; letter-spacing: -0.04em; line-height: 1; }
-.section-heading > p { max-width: 480px; margin: 0; color: var(--muted); font-size: 15px; }
-.section-heading-reverse { grid-template-columns: minmax(280px, .45fr) 1fr; }
-.section-heading-reverse > div { grid-row: 1; grid-column: 2; }
-.section-heading-reverse > p { grid-row: 1; grid-column: 1; }
 
 .research-story {
   display: grid;
@@ -524,7 +518,6 @@ button, input, textarea { font: inherit; }
 .expertise-section { overflow: hidden; background: var(--ink); color: var(--white); }
 .section-heading-dark { border-bottom-color: var(--line-light); }
 .section-heading-dark h2 em { color: var(--sage); font-weight: 400; }
-.section-heading-dark > p { color: rgba(255,255,255,.6); }
 
 .skills-list { border-top: 1px solid var(--line-light); }
 .skill-row { display: grid; grid-template-columns: minmax(250px, .72fr) minmax(0, 1.28fr); gap: clamp(38px, 7vw, 90px); padding-block: 30px; border-bottom: 1px solid var(--line-light); }
@@ -672,10 +665,7 @@ button, input, textarea { font: inherit; }
   .button { width: 100%; }
   .affiliation-card { padding: 20px; }
   .affiliation-role { font-size: 22px; }
-  .section-heading { grid-template-columns: 1fr; gap: 18px; margin-bottom: 30px; }
-  .section-heading > p { display: none; }
-  .section-heading-reverse > div,
-  .section-heading-reverse > p { grid-row: auto; grid-column: auto; }
+  .section-heading { margin-bottom: 30px; }
   .research-story { padding-block: 44px; }
   .ias-stage-flow { margin-top: 34px; padding-top: 32px; }
   .ias-stage { grid-template-columns: 1fr; gap: 26px; }
