@@ -5,18 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Samiul Hossain Sajal is a condensed matter physicist working across materials science, microscopy, molecular simulation, and scientific machine learning.">
   <meta name="theme-color" content="#101817">
-  <link rel="icon" type="image/jpeg" href="images/hero-samiul.jpg">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
   <link rel="canonical" href="https://www.samiulhossain.com/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.samiulhossain.com/">
   <meta property="og:title" content="Samiul Hossain Sajal — Condensed Matter Physicist">
   <meta property="og:description" content="Research in condensed matter physics supported by simulation, computer vision, and scientific machine learning.">
-  <meta property="og:image" content="https://www.samiulhossain.com/images/hero-samiul.jpg">
-  <meta property="og:image:alt" content="Portrait of Samiul Hossain Sajal">
+  <meta property="og:image" content="https://www.samiulhossain.com/images/og-samiul.png">
+  <meta property="og:image:width" content="1732">
+  <meta property="og:image:height" content="908">
+  <meta property="og:image:alt" content="Portrait of Samiul Hossain Sajal against a dark blue and copper background">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Samiul Hossain Sajal — Condensed Matter Physicist">
+  <meta name="twitter:description" content="Condensed matter physics supported by molecular simulation, microscopy, and computer vision.">
+  <meta name="twitter:image" content="https://www.samiulhossain.com/images/og-samiul.png">
   <title>Samiul Hossain Sajal — Condensed Matter Physicist</title>
   <script>document.documentElement.classList.add("js");</script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="css/portfolio.css?v=17">
+  <link rel="stylesheet" href="css/portfolio.css?v=19">
   <script src="js/portfolio.js?v=6" defer></script>
 </head>
 <body>
@@ -53,7 +59,7 @@
       <div class="shell hero-layout">
         <div class="hero-copy reveal">
           <p class="eyebrow">Condensed matter physics · Materials science</p>
-          <h1 id="hero-title">Understanding materials through <em>physics</em>, simulation, and scientific AI.</h1>
+          <h1 id="hero-title">Understanding materials through <em>physics</em>, simulation, and computer vision.</h1>
           <p class="hero-intro">I’m Samiul Hossain Sajal, a physicist combining materials knowledge with molecular simulation, microscopy data, computer vision, and machine learning.</p>
           <div class="hero-actions">
             <a class="button button-primary" href="#research">Explore my research <span aria-hidden="true">↘</span></a>
@@ -63,11 +69,11 @@
 
         <aside class="affiliation-card reveal" aria-label="Current affiliation">
           <span class="status"><span></span> Current research</span>
-          <p class="affiliation-role">Student Research Assistant ·<br>M.Sc. thesis research</p>
+          <p class="affiliation-role">Student Research Assistant <span>(M.Sc. thesis)</span></p>
           <p>Materials Data Science and Informatics (IAS-9)<br>Forschungszentrum Jülich</p>
           <div class="affiliation-meta">
             <span>Jülich, Germany</span>
-            <span>2025—2026</span>
+            <span>Nov 2025—Present</span>
           </div>
         </aside>
       </div>
@@ -86,7 +92,7 @@
           <p>From atomistic simulation to computer vision for evolving microstructures.</p>
         </div>
 
-        <article class="research-story research-story-ias-chapter reveal">
+        <article class="research-story research-story-ias-chapter reveal" id="ias-research">
           <header class="ias-chapter-header">
             <div class="research-meta">
               <span class="index">01</span>
@@ -94,7 +100,7 @@
             </div>
             <p class="institution">Materials Data Science and Informatics (IAS-9) · Forschungszentrum Jülich</p>
             <h3>Automated segmentation and tracking of grain growth in TEM data</h3>
-            <p class="research-lead"><strong>Build a reliable path from single-frame segmentation to persistent temporal identity.</strong> The resulting trajectories allow researchers to measure area, morphology, boundary motion, and grain growth over time.</p>
+            <p class="research-lead"><strong>The in-situ TEM videos contain hundreds to thousands of frames, making manual annotation and identity tracking slow and impractical.</strong> I am developing a pipeline that moves from single-frame segmentation to persistent grain identities so researchers can quantify area, morphology, boundary motion, and grain growth over time.</p>
           </header>
 
           <div class="ias-stage-flow" aria-label="Research process from segmentation to tracking">
@@ -117,9 +123,9 @@
               <div class="ias-stage-copy">
                 <span>Step 02 · Time series</span>
                 <h4>Video object tracking</h4>
-                <p>Preserve each grain’s identity through boundary motion, growth, shrinkage, and changing neighbours so its evolution can be quantified.</p>
+                <p>Preserve each grain’s identity through boundary motion, growth, shrinkage, and changing neighbours, so its evolution can be quantified.</p>
                 <ul class="method-list method-list-prominent" aria-label="Tracking methods">
-                  <li>Video object tracking</li><li>Persistent IDs</li><li>Hungarian algorithm</li><li>SAM2 · SAM3 video segmentation</li><li>Prompt engineering</li><li>PyTorch</li><li>OpenCV</li><li>YOLO — planned</li><li>Grain growth</li>
+                  <li>Video object tracking</li><li>Persistent IDs</li><li>Hungarian algorithm</li><li>SAM2 · SAM3 video segmentation</li><li>Prompt engineering</li><li>PyTorch · OpenCV</li><li>YOLO — planned</li>
                 </ul>
               </div>
               <figure class="research-demo research-demo-motion">
@@ -131,7 +137,12 @@
 
         </article>
 
-        <article class="research-story research-story-reverse reveal">
+        <article class="research-story research-story-reverse reveal" id="md-research">
+          <div class="research-meta research-meta-wide">
+            <span class="index">02</span>
+            <span>Completed · M.Sc. thesis</span>
+          </div>
+
           <figure class="research-media research-media-contain">
             <img src="images/research_experience/image3.png" alt="Molecular-dynamics snapshot showing aluminium atoms clustering into nanoparticles inside the simulation cell" loading="lazy">
             <figcaption>
@@ -141,10 +152,6 @@
           </figure>
 
           <div class="research-narrative">
-            <div class="research-meta">
-              <span class="index">02</span>
-              <span>Completed · M.Sc. thesis</span>
-            </div>
             <p class="institution">Shahjalal University of Science &amp; Technology</p>
             <h3>Molecular dynamics of aluminium nanoparticle formation and oxidation during pulsed laser ablation in liquids</h3>
 
@@ -175,19 +182,18 @@
           <div class="timeline" aria-label="Research roles">
             <article class="timeline-item reveal">
               <div class="timeline-date">
-                <span>2025—2026</span>
+                <span>Nov 2025—Present</span>
                 <strong>Current</strong>
               </div>
               <div class="timeline-copy">
                 <p class="institution">Forschungszentrum Jülich · IAS-9</p>
-                <h3>Student Research Assistant · M.Sc. Thesis Research</h3>
-                <p>Developing and evaluating scientific computer-vision methods for time-resolved TEM data, with the goal of measuring grain-growth behaviour reliably across long microscopy sequences.</p>
+                <h3>Student Research Assistant (M.Sc. thesis)</h3>
                 <ul class="compact-list">
                   <li>Microscopy-data processing and validation</li>
                   <li>Segmentation and temporal tracking</li>
                   <li>Quantitative grain-growth measurement and analysis</li>
                 </ul>
-                <a class="text-link" href="#research">See the featured research <span aria-hidden="true">↑</span></a>
+                <a class="text-link" href="#ias-research">See the featured research <span aria-hidden="true">↑</span></a>
               </div>
             </article>
 
@@ -196,13 +202,12 @@
               <div class="timeline-copy">
                 <p class="institution">Shahjalal University of Science &amp; Technology</p>
                 <h3>M.Sc. Thesis Researcher · Computational Materials Physics</h3>
-                <p>Used molecular-dynamics simulation to study the formation and oxidation of aluminium nanoparticles during pulsed laser ablation in liquids.</p>
                 <ul class="compact-list">
                   <li>LAMMPS and ReaxFF simulation</li>
                   <li>OVITO, VMD, and Python analysis</li>
                   <li>M.Sc. thesis and poster presentations</li>
                 </ul>
-                <a class="text-link" href="https://www.researchgate.net/publication/372522453_MSc_Thesis_Final" target="_blank" rel="noopener noreferrer">Read the full research <span aria-hidden="true">↗</span></a>
+                <a class="text-link" href="#md-research">See the featured research <span aria-hidden="true">↑</span></a>
               </div>
             </article>
           </div>
@@ -258,7 +263,7 @@
           <article class="skill-row reveal">
             <div class="skill-heading"><span>02</span><h3>Computer vision &amp; machine learning</h3></div>
             <ul class="skill-list">
-              <li>Image &amp; Instance Segmentation</li><li>Video Object Tracking</li><li>SAM · SAM2 · SAM3</li><li>MatSAM</li><li>U-Net</li><li>YOLO</li><li>PyTorch</li><li>OpenCV</li><li>Napari</li>
+              <li>Image &amp; Instance Segmentation</li><li>Video Object Tracking</li><li>Hungarian Algorithm</li><li>Prompt Engineering</li><li>SAM · SAM2 · SAM3</li><li>MatSAM</li><li>U-Net</li><li>YOLO — planned</li><li>PyTorch · OpenCV</li><li>Napari</li>
             </ul>
           </article>
 
@@ -286,26 +291,28 @@
           <article class="training-row reveal">
             <div class="training-meta"><span>2025</span><p>Coursera Project Network</p></div>
             <div class="training-details"><h3>Deep Learning with PyTorch: Image Segmentation</h3><p>U-Net · PyTorch · Albumentations · custom datasets</p></div>
-            <a class="training-thumb" href="images/technical_training/Coursera_deep_learning_certificate.jpg" target="_blank" aria-label="Open Deep Learning with PyTorch certificate"><img src="images/technical_training/Coursera_deep_learning_certificate.jpg" alt="Deep Learning with PyTorch Image Segmentation certificate" loading="lazy"></a>
+            <a class="training-thumb" href="images/technical_training/Coursera_deep_learning_certificate.jpg" target="_blank" rel="noopener" aria-label="Open Deep Learning with PyTorch certificate"><img src="images/technical_training/Coursera_deep_learning_certificate.jpg" alt="Deep Learning with PyTorch Image Segmentation certificate" loading="lazy"></a>
           </article>
           <article class="training-row reveal">
             <div class="training-meta"><span>8-course series</span><p>Google</p></div>
             <div class="training-details"><h3>Google Data Analytics Professional Certificate</h3><p>Data cleaning · analysis · visualization · R</p></div>
-            <a class="training-thumb" href="images/technical_training/google_data_analytics.jpg" target="_blank" aria-label="Open Google Data Analytics certificate"><img src="images/technical_training/google_data_analytics.jpg" alt="Google Data Analytics Professional Certificate" loading="lazy"></a>
+            <a class="training-thumb" href="images/technical_training/google_data_analytics.jpg" target="_blank" rel="noopener" aria-label="Open Google Data Analytics certificate"><img src="images/technical_training/google_data_analytics.jpg" alt="Google Data Analytics Professional Certificate" loading="lazy"></a>
           </article>
           <article class="training-row reveal">
             <div class="training-meta"><span>5-course series</span><p>University of Michigan</p></div>
             <div class="training-details"><h3>Python for Everybody</h3><p>Python · data structures · web data · databases</p></div>
-            <a class="training-thumb" href="images/technical_training/python_for_everybody.jpg" target="_blank" aria-label="Open Python for Everybody certificate"><img src="images/technical_training/python_for_everybody.jpg" alt="Python for Everybody certificate" loading="lazy"></a>
+            <a class="training-thumb" href="images/technical_training/python_for_everybody.jpg" target="_blank" rel="noopener" aria-label="Open Python for Everybody certificate"><img src="images/technical_training/python_for_everybody.jpg" alt="Python for Everybody certificate" loading="lazy"></a>
           </article>
         </div>
 
         <div class="additional-training reveal" aria-label="Additional technical courses">
-          <p class="additional-training-label">Additional courses</p>
+          <p class="additional-training-label">Additional courses · University of Cologne</p>
           <div class="additional-course-list">
-            <article><span>Scientific computing</span><div><h3>Scientific Programming in Python</h3><p>NumPy · SciPy · Matplotlib · ODE solvers · OOP</p></div></article>
-            <article><span>Numerical methods</span><div><h3>Intensive Julia Programming Workshop</h3><p>Julia · 4th-order Runge–Kutta · numerical integration</p></div></article>
-            <article><span>Statistics</span><div><h3>Every Number Tells a Story</h3><p>R · regression · probability distributions</p></div></article>
+            <article><span>6 ECTS</span><div><h3>Computational Many-Body Physics</h3><p>Classical and quantum many-body systems · Ising, Heisenberg, and Kitaev models · spin correlations and entanglement · exact diagonalization · quantum Monte Carlo</p></div></article>
+            <article><span>6 ECTS</span><div><h3>Deep Learning and Physics</h3><p>Neural-network training and generalization · CNNs and U-Net · self-supervised and generative models · transformers · physics-informed and equivariant networks</p></div></article>
+            <article><span>6 ECTS</span><div><h3>Scientific Programming in Python</h3><p>NumPy · SciPy · Matplotlib · ODE solvers · OOP</p></div></article>
+            <article><span>3 ECTS · Intensive week</span><div><h3>Intensive Julia Programming Workshop</h3><p>Julia · 4th-order Runge–Kutta · numerical integration</p></div></article>
+            <article><span>Voluntary · Intensive week</span><div><h3>Every Number Tells a Story</h3><p>R · regression · probability distributions</p></div></article>
           </div>
         </div>
       </div>
@@ -321,10 +328,10 @@
           <div class="recognition-group recognition-group-poster">
             <p class="recognition-label">Poster presentation</p>
             <article class="poster-feature reveal">
-              <a class="poster-image" href="images/poster/BPS_2021_Poster.jpg" target="_blank" aria-label="Open full Bangladesh Physical Society poster">
+              <a class="poster-image" href="images/poster/BPS_2021_Poster.jpg" target="_blank" rel="noopener" aria-label="Open full Bangladesh Physical Society poster">
                 <img src="images/poster/BPS_2021_Poster.jpg" alt="Poster on aluminium nanocluster formation presented to the Bangladesh Physical Society" loading="lazy">
               </a>
-              <div class="poster-copy"><span>Bangladesh Physical Society · 2021</span><h3>Atomic-scale investigation of the formation of Al nano-cluster in the Pulsed Laser Ablation Technique</h3><p>Samiul Hossain Sajal · Nithika Datta · Dr Md Enamul Hoque</p><a class="text-link" href="https://www.researchgate.net/publication/372523433_Atomic-scale_investigation_of_the_formation_of_Al_nano-cluster_in_the_Pulsed_Laser_Ablation_Technique" target="_blank" rel="noopener noreferrer">View on ResearchGate <span aria-hidden="true">↗</span></a></div>
+              <div class="poster-copy"><span>Bangladesh Physical Society · 2021</span><h3>Atomic-scale investigation of the formation of Al nano-cluster in the Pulsed Laser Ablation Technique</h3><a class="text-link" href="https://www.researchgate.net/publication/372523433_Atomic-scale_investigation_of_the_formation_of_Al_nano-cluster_in_the_Pulsed_Laser_Ablation_Technique" target="_blank" rel="noopener noreferrer">View on ResearchGate <span aria-hidden="true">↗</span></a></div>
             </article>
           </div>
           <div class="recognition-group recognition-group-awards">
@@ -343,7 +350,7 @@
       <div class="shell about-layout">
         <div class="about-heading reveal">
           <p class="eyebrow">About me</p>
-          <h2 id="about-title">A materials physicist building a stronger computational toolkit.</h2>
+          <h2 id="about-title">A condensed matter physicist connecting materials, simulation, and computer vision.</h2>
         </div>
         <div class="about-copy reveal">
           <p class="about-lead">My central interest is condensed matter physics—especially material structure, microstructural evolution, and the physical insight hidden in experimental or simulated data.</p>

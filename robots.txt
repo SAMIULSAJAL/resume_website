@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /main.html
+Disallow: /project_3_body_problem.html
+Disallow: /project_google_sheet_business_analysis.html
+
+Sitemap: https://www.samiulhossain.com/sitemap.xml
