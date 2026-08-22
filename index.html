@@ -16,7 +16,7 @@
   <title>Samiul Hossain Sajal — Condensed Matter Physicist</title>
   <script>document.documentElement.classList.add("js");</script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="css/portfolio.css?v=10">
+  <link rel="stylesheet" href="css/portfolio.css?v=17">
   <script src="js/portfolio.js?v=6" defer></script>
 </head>
 <body>
@@ -86,43 +86,49 @@
           <p>From atomistic simulation to computer vision for evolving microstructures.</p>
         </div>
 
-        <article class="research-story research-story-featured reveal">
-          <div class="research-visual-pair" aria-label="Illustrations of grain segmentation and temporal evolution">
-            <figure class="research-demo">
-              <div class="demo-label"><span>01</span> Segment</div>
-              <img src="images/research_experience/tem-segmentation-illustration.png" alt="Illustrative TEM-style microstructure with one grain highlighted by an orange segmentation mask" loading="lazy">
-              <figcaption>Illustrative single-grain segmentation · conceptual, not project data</figcaption>
-            </figure>
-            <figure class="research-demo research-demo-motion">
-              <div class="demo-label"><span>02</span> Track</div>
-              <img src="images/research_experience/tem-grain-tracking-illustration.png" alt="Conceptual TEM-style frame with five segmented grains, bounding boxes, and persistent tracking identifiers" loading="lazy">
-              <figcaption>Conceptual multi-grain tracking · masks, bounding boxes, and persistent IDs</figcaption>
-            </figure>
-          </div>
-          <div class="research-narrative">
+        <article class="research-story research-story-ias-chapter reveal">
+          <header class="ias-chapter-header">
             <div class="research-meta">
               <span class="index">01</span>
               <span>Ongoing · M.Sc. thesis</span>
             </div>
             <p class="institution">Materials Data Science and Informatics (IAS-9) · Forschungszentrum Jülich</p>
             <h3>Automated segmentation and tracking of grain growth in TEM data</h3>
+            <p class="research-lead"><strong>Build a reliable path from single-frame segmentation to persistent temporal identity.</strong> The resulting trajectories allow researchers to measure area, morphology, boundary motion, and grain growth over time.</p>
+          </header>
 
-            <p class="research-lead"><strong>Segmentation is the starting point; grain tracking is the central challenge.</strong> I am building a pipeline that preserves each grain’s identity across long in-situ TEM sequences so researchers can measure area, morphology, boundary motion, and grain growth over time.</p>
+          <div class="ias-stage-flow" aria-label="Research process from segmentation to tracking">
+            <section class="ias-stage">
+              <div class="ias-stage-copy">
+                <span>Step 01 · Single frame</span>
+                <h4>Grain segmentation</h4>
+                <p>Convert difficult and changing microscopy contrast into grain-level masks that establish the objects to be tracked.</p>
+                <ul class="method-list method-list-prominent" aria-label="Segmentation methods">
+                  <li>In-situ TEM</li><li>Instance segmentation</li><li>SAM · SAM2 · SAM3</li><li>Prompt engineering</li><li>MatSAM</li><li>U-Net</li><li>EBSD</li>
+                </ul>
+              </div>
+              <figure class="research-demo">
+                <img src="images/research_experience/tem-segmentation-illustration.png" alt="Illustrative TEM-style microstructure with one grain highlighted by an orange segmentation mask" loading="lazy">
+                <figcaption>Single-grain segmentation · conceptual illustration, not project data</figcaption>
+              </figure>
+            </section>
 
-            <div class="research-focus-grid" aria-label="Primary project focus">
-              <div><span>01 · Single frame</span><strong>Grain segmentation</strong><p>Adapt and compare modern segmentation methods for difficult microscopy contrast.</p></div>
-              <div><span>02 · Time series</span><strong>Video object tracking</strong><p>Maintain grain identity through boundary motion, growth, shrinkage, and changing neighbours.</p></div>
-            </div>
-
-            <div class="method-block">
-              <span>Computer-vision methods</span>
-              <ul class="method-list method-list-prominent" aria-label="Computer-vision methods and tools">
-                <li>In-situ TEM</li><li>Instance segmentation</li><li>Video object tracking</li><li>SAM · SAM2 · SAM3</li><li>MatSAM</li><li>U-Net</li><li>YOLO — planned</li><li>PyTorch</li><li>OpenCV</li><li>Grain growth</li>
-              </ul>
-            </div>
-
-            <p class="supporting-work"><strong>Additional data exposure:</strong> EBSD orientation maps · exploratory TEM registration</p>
+            <section class="ias-stage">
+              <div class="ias-stage-copy">
+                <span>Step 02 · Time series</span>
+                <h4>Video object tracking</h4>
+                <p>Preserve each grain’s identity through boundary motion, growth, shrinkage, and changing neighbours so its evolution can be quantified.</p>
+                <ul class="method-list method-list-prominent" aria-label="Tracking methods">
+                  <li>Video object tracking</li><li>Persistent IDs</li><li>Hungarian algorithm</li><li>SAM2 · SAM3 video segmentation</li><li>Prompt engineering</li><li>PyTorch</li><li>OpenCV</li><li>YOLO — planned</li><li>Grain growth</li>
+                </ul>
+              </div>
+              <figure class="research-demo research-demo-motion">
+                <img src="images/research_experience/tem-grain-tracking-illustration.png" alt="Conceptual TEM-style frame with five segmented grains, bounding boxes, and persistent tracking identifiers" loading="lazy">
+                <figcaption>Multi-grain tracking · masks, bounding boxes, and persistent IDs</figcaption>
+              </figure>
+            </section>
           </div>
+
         </article>
 
         <article class="research-story research-story-reverse reveal">
@@ -268,7 +274,7 @@
 
     <section class="section training-section" id="training" aria-labelledby="training-title">
       <div class="shell">
-        <div class="section-heading section-heading-reverse reveal">
+        <div class="section-heading reveal">
           <div>
             <p class="eyebrow">Continued learning</p>
             <h2 id="training-title">Technical training</h2>
