@@ -22,7 +22,7 @@
   <title>Samiul Hossain Sajal — Condensed Matter Physicist</title>
   <script>document.documentElement.classList.add("js");</script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="css/portfolio.css?v=21">
+  <link rel="stylesheet" href="css/portfolio.css?v=22">
   <script src="js/portfolio.js?v=6" defer></script>
 </head>
 <body>
@@ -96,7 +96,8 @@
             </div>
             <p class="institution">Materials Data Science and Informatics (IAS-9) · Forschungszentrum Jülich</p>
             <h3>Automated segmentation and tracking of grain growth in TEM data</h3>
-            <p class="research-lead"><strong>The in-situ TEM videos contain hundreds to thousands of frames, making manual annotation and identity tracking slow and impractical.</strong> I am developing a pipeline that moves from single-frame segmentation to persistent grain identities so researchers can quantify area, morphology, boundary motion, and grain growth over time.</p>
+            <p class="research-lead"><strong>The in situ TEM videos contain hundreds to thousands of frames, making manual annotation and identity tracking slow and impractical.</strong> I am developing a pipeline that moves from single-frame segmentation to persistent grain identities so researchers can quantify area, morphology, boundary motion, and grain growth over time.</p>
+            <p class="research-contribution"><strong>My contribution</strong><span>Design and implementation of the segmentation-to-tracking workflow, from grain-mask generation to persistent identity assignment across TEM frames.</span></p>
           </header>
 
           <div class="ias-stage-flow" aria-label="Research process from segmentation to tracking">
@@ -106,7 +107,7 @@
                 <h4>Grain segmentation</h4>
                 <p>Convert difficult and changing microscopy contrast into grain-level masks that establish the objects to be tracked.</p>
                 <ul class="method-list method-list-prominent" aria-label="Segmentation methods">
-                  <li>In-situ TEM</li><li>Instance segmentation</li><li>SAM · SAM2 · SAM3</li><li>Prompt engineering</li><li>MatSAM</li><li>U-Net</li><li>EBSD</li>
+                  <li>In situ TEM</li><li>Instance segmentation</li><li>SAM · SAM2 · SAM3</li><li>Prompt-based segmentation</li><li>MatSAM</li><li>U-Net</li><li>EBSD data exploration</li>
                 </ul>
               </div>
               <figure class="research-demo">
@@ -121,7 +122,7 @@
                 <h4>Video object tracking</h4>
                 <p>Preserve each grain’s identity through boundary motion, growth, shrinkage, and changing neighbours, so its evolution can be quantified.</p>
                 <ul class="method-list method-list-prominent" aria-label="Tracking methods">
-                  <li>Video object tracking</li><li>Persistent IDs</li><li>Hungarian algorithm</li><li>SAM2 · SAM3 video segmentation</li><li>Prompt engineering</li><li>PyTorch · OpenCV</li><li>YOLO — planned</li>
+                  <li>Video object tracking</li><li>Persistent IDs</li><li>Hungarian algorithm</li><li>SAM2 · SAM3 video segmentation</li><li>Prompt-based segmentation</li><li>PyTorch · OpenCV</li>
                 </ul>
               </div>
               <figure class="research-demo research-demo-motion">
@@ -158,7 +159,10 @@
               <li><strong>Result</strong><span>Cooling conditions affected nanoparticle formation and final particle size.</span></li>
             </ul>
 
-            <a class="text-link" href="https://www.researchgate.net/publication/372522453_MSc_Thesis_Final" target="_blank" rel="noopener noreferrer">Read the full thesis on ResearchGate <span aria-hidden="true">↗</span></a>
+            <div class="research-links">
+              <a class="text-link" href="https://www.researchgate.net/publication/372522453_MSc_Thesis_Final" target="_blank" rel="noopener noreferrer">Read the full thesis on ResearchGate <span aria-hidden="true">↗</span></a>
+              <a class="doi-link" href="https://doi.org/10.13140/RG.2.2.21838.43845" target="_blank" rel="noopener noreferrer"><span>Thesis DOI</span> 10.13140/RG.2.2.21838.43845</a>
+            </div>
           </div>
         </article>
       </div>
@@ -250,14 +254,14 @@
           <article class="skill-row reveal">
             <div class="skill-heading"><span>01</span><h3>Condensed matter &amp; materials physics</h3></div>
             <ul class="skill-list">
-              <li>Condensed Matter Physics</li><li>Materials Science</li><li>Microstructure</li><li>Grain Growth</li><li>Electron Microscopy</li><li>Scanning Probe Microscopy</li><li>STM · STS</li><li>2D Materials &amp; Thin Films</li><li>2D Correlated Systems</li><li>EBSD</li><li>Nanoparticles</li>
+              <li>Condensed Matter Physics</li><li>Materials Science</li><li>Microstructure</li><li>Grain Growth</li><li>Electron Microscopy</li><li>EBSD data exploration</li><li>Nanoparticles</li><li>Coursework: SPM, STM/STS, 2D materials &amp; correlated systems</li>
             </ul>
           </article>
 
           <article class="skill-row reveal">
             <div class="skill-heading"><span>02</span><h3>Computer vision &amp; machine learning</h3></div>
             <ul class="skill-list">
-              <li>Image &amp; Instance Segmentation</li><li>Video Object Tracking</li><li>Hungarian Algorithm</li><li>Prompt Engineering</li><li>SAM · SAM2 · SAM3</li><li>MatSAM</li><li>U-Net</li><li>YOLO — planned</li><li>PyTorch · OpenCV</li><li>Napari</li>
+              <li>Image &amp; Instance Segmentation</li><li>Video Object Tracking</li><li>Hungarian Algorithm</li><li>Prompt-based Segmentation</li><li>SAM · SAM2 · SAM3</li><li>MatSAM</li><li>U-Net</li><li>PyTorch · OpenCV</li><li>Napari</li>
             </ul>
           </article>
 
@@ -276,36 +280,39 @@
         <div class="section-heading reveal">
           <div>
             <p class="eyebrow">Continued learning</p>
-            <h2 id="training-title">Technical training</h2>
+            <h2 id="training-title">Selected coursework &amp; training</h2>
           </div>
         </div>
 
-        <div class="training-list" aria-label="Selected technical certificates">
-          <article class="training-row reveal">
-            <div class="training-meta"><span>2025</span><p>Coursera Project Network</p></div>
-            <div class="training-details"><h3>Deep Learning with PyTorch: Image Segmentation</h3><p>U-Net · PyTorch · Albumentations · custom datasets</p></div>
-            <a class="training-thumb" href="images/technical_training/Coursera_deep_learning_certificate.jpg" target="_blank" rel="noopener" aria-label="Open Deep Learning with PyTorch certificate"><img src="images/technical_training/Coursera_deep_learning_certificate.jpg" alt="Deep Learning with PyTorch Image Segmentation certificate" loading="lazy"></a>
-          </article>
-          <article class="training-row reveal">
-            <div class="training-meta"><span>8-course series</span><p>Google</p></div>
-            <div class="training-details"><h3>Google Data Analytics Professional Certificate</h3><p>Data cleaning · analysis · visualization · R</p></div>
-            <a class="training-thumb" href="images/technical_training/google_data_analytics.jpg" target="_blank" rel="noopener" aria-label="Open Google Data Analytics certificate"><img src="images/technical_training/google_data_analytics.jpg" alt="Google Data Analytics Professional Certificate" loading="lazy"></a>
-          </article>
-          <article class="training-row reveal">
-            <div class="training-meta"><span>5-course series</span><p>University of Michigan</p></div>
-            <div class="training-details"><h3>Python for Everybody</h3><p>Python · data structures · web data · databases</p></div>
-            <a class="training-thumb" href="images/technical_training/python_for_everybody.jpg" target="_blank" rel="noopener" aria-label="Open Python for Everybody certificate"><img src="images/technical_training/python_for_everybody.jpg" alt="Python for Everybody certificate" loading="lazy"></a>
-          </article>
-        </div>
-
-        <div class="additional-training reveal" aria-label="Additional technical courses">
-          <p class="additional-training-label">Additional courses · University of Cologne</p>
+        <div class="additional-training reveal" aria-label="Selected university coursework">
+          <p class="additional-training-label">Selected coursework · University of Cologne</p>
           <div class="additional-course-list">
             <article><span>6 ECTS</span><div><h3>Computational Many-Body Physics</h3><p>Classical and quantum many-body systems · Ising, Heisenberg, and Kitaev models · spin correlations and entanglement · exact diagonalization · quantum Monte Carlo</p></div></article>
             <article><span>6 ECTS</span><div><h3>Deep Learning and Physics</h3><p>Neural-network training and generalization · CNNs and U-Net · self-supervised and generative models · transformers · physics-informed and equivariant networks</p></div></article>
             <article><span>6 ECTS</span><div><h3>Scientific Programming in Python</h3><p>NumPy · SciPy · Matplotlib · ODE solvers · OOP</p></div></article>
             <article><span>3 ECTS · Intensive week</span><div><h3>Intensive Julia Programming Workshop</h3><p>Julia · 4th-order Runge–Kutta · numerical integration</p></div></article>
             <article><span>Voluntary · Intensive week</span><div><h3>Every Number Tells a Story</h3><p>R · regression · probability distributions</p></div></article>
+          </div>
+        </div>
+
+        <div class="certificate-training">
+          <p class="additional-training-label reveal">Professional certificates</p>
+          <div class="training-list" aria-label="Selected professional certificates">
+            <article class="training-row reveal">
+              <div class="training-meta"><span>2025</span><p>Coursera Project Network</p></div>
+              <div class="training-details"><h3>Deep Learning with PyTorch: Image Segmentation</h3><p>U-Net · PyTorch · Albumentations · custom datasets</p></div>
+              <a class="training-thumb" href="images/technical_training/Coursera_deep_learning_certificate.jpg" target="_blank" rel="noopener" aria-label="Open Deep Learning with PyTorch certificate"><img src="images/technical_training/Coursera_deep_learning_certificate.jpg" alt="Deep Learning with PyTorch Image Segmentation certificate" loading="lazy"></a>
+            </article>
+            <article class="training-row reveal">
+              <div class="training-meta"><span>8-course series</span><p>Google</p></div>
+              <div class="training-details"><h3>Google Data Analytics Professional Certificate</h3><p>Data cleaning · analysis · visualization · R</p></div>
+              <a class="training-thumb" href="images/technical_training/google_data_analytics.jpg" target="_blank" rel="noopener" aria-label="Open Google Data Analytics certificate"><img src="images/technical_training/google_data_analytics.jpg" alt="Google Data Analytics Professional Certificate" loading="lazy"></a>
+            </article>
+            <article class="training-row reveal">
+              <div class="training-meta"><span>5-course series</span><p>University of Michigan</p></div>
+              <div class="training-details"><h3>Python for Everybody</h3><p>Python · data structures · web data · databases</p></div>
+              <a class="training-thumb" href="images/technical_training/python_for_everybody.jpg" target="_blank" rel="noopener" aria-label="Open Python for Everybody certificate"><img src="images/technical_training/python_for_everybody.jpg" alt="Python for Everybody certificate" loading="lazy"></a>
+            </article>
           </div>
         </div>
       </div>
@@ -330,8 +337,8 @@
             <p class="recognition-label">Awards &amp; honors</p>
             <div class="awards-list reveal" aria-label="Awards and honors">
               <article><span>2020—2021</span><i class="fa-solid fa-award" aria-hidden="true"></i><div><h3>National Science and Technology Fellowship</h3><p>Ministry of Science and Technology, Bangladesh</p></div></article>
-              <article><span>2018</span><i class="fa-solid fa-camera" aria-hidden="true"></i><div><h3>Honorable Photographer · Exceed</h3><p>SUST CEE Festival, Bangladesh</p></div></article>
-              <article><span>2012</span><i class="fa-solid fa-trophy" aria-hidden="true"></i><div><h3>2nd Runner-up · Science Fair</h3><p>Birshreshtha Noor Mohammad Public College, Bangladesh</p></div></article>
+              <article class="award-secondary"><span>2018</span><i class="fa-solid fa-camera" aria-hidden="true"></i><div><h3>Honorable Photographer · Exceed</h3><p>SUST CEE Festival, Bangladesh</p></div></article>
+              <article class="award-secondary"><span>2012</span><i class="fa-solid fa-trophy" aria-hidden="true"></i><div><h3>2nd Runner-up · Science Fair</h3><p>Birshreshtha Noor Mohammad Public College, Bangladesh</p></div></article>
             </div>
           </div>
         </div>
@@ -346,7 +353,7 @@
         </div>
         <div class="about-copy reveal">
           <p class="about-lead">My central interest is condensed matter physics—especially material structure, microstructural evolution, and the physical insight hidden in experimental or simulated data.</p>
-          <p>My earlier research used atomistic simulation to investigate nanoparticle formation. Today, at IAS-9, I work with in-situ TEM videos and modern computer-vision models to quantify how grains change over time. Across both projects, the goal is the same: connect computational results to a clear materials-science question.</p>
+          <p>My earlier research used atomistic simulation to investigate nanoparticle formation. Today, at IAS-9, I work with in situ TEM videos and modern computer-vision models to quantify how grains change over time. Across both projects, the goal is the same: connect computational results to a clear materials-science question.</p>
           <p>I am interested in PhD and industry opportunities in condensed matter physics, computational materials science, scientific machine learning, semiconductor or microscopy-related R&amp;D, and roles that connect experiments with meaningful data analysis.</p>
           <div class="social-links" aria-label="Professional profiles">
             <a href="https://www.linkedin.com/in/samiul-sajal/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
@@ -361,7 +368,7 @@
       <div class="shell contact-layout">
         <div class="contact-copy reveal">
           <p class="eyebrow">Let’s connect</p>
-          <h2 id="contact-title">Interested in materials, microscopy, or scientific AI?</h2>
+          <h2 id="contact-title">Interested in materials, microscopy, or scientific machine learning?</h2>
           <p>I’m always glad to discuss research, PhD possibilities, and technical roles where physics and computation meet.</p>
           <dl class="contact-details">
             <div><dt>Email</dt><dd><a href="mailto:samiulhossainsajal@gmail.com">samiulhossainsajal@gmail.com</a></dd></div>
